@@ -9,7 +9,6 @@ signal go_menu
 const ART := "res://assets/"
 const VELD := "res://assets/arenas/veld/"
 const LANE_W := 1.25
-const OBSTACLE_SECONDS := 0.9  # after a tap, the obstacle row reaches the springbok this fast
 const BASE_SPEED := 9.0        # m/s at difficulty speed 1.0
 const TRACK_LEN := 220.0
 const TILE := 1.6              # metres per ground texture tile
@@ -55,8 +54,10 @@ var level_label: Label
 var dots: HBoxContainer
 var prompt_label: Label
 var prompt_hint: Label
-var chips: HBoxContainer
+var chips: VBoxContainer
 var timer_bar: ProgressBar
+var top_band: PanelContainer
+var bottom_band: PanelContainer
 var combo_label: Label
 var center_label: Label
 var pair_panel: PanelContainer
@@ -420,8 +421,9 @@ func _build_world() -> void:
 	cam = Camera3D.new()
 	cam.keep_aspect = Camera3D.KEEP_WIDTH
 	cam.fov = 64.0
-	cam.position = Vector3(0, 2.9, 4.6)
-	cam.rotation_degrees = Vector3(-13, 0, 0)
+	# High, looking down: the horizon is hidden behind the top HUD band.
+	cam.position = Vector3(0, 5.1, 1.7)
+	cam.rotation_degrees = Vector3(-55, 0, 0)
 	cam.far = 260.0
 	world.add_child(cam)
 	cam.current = true
@@ -490,6 +492,7 @@ func _build_world() -> void:
 	player.sprite_frames = frames
 	player.pixel_size = 2.0 / 256.0
 	player.offset = Vector2(0, 113)
+	player.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	player.shaded = false
 	player.alpha_cut = SpriteBase3D.ALPHA_CUT_DISCARD
 	player.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
@@ -516,6 +519,7 @@ func _billboard(path: String, px: int, height_m: float) -> Sprite3D:
 	s.texture = _tex(path)
 	s.pixel_size = height_m / float(px)
 	s.offset = Vector2(0, px / 2.0 - 4)
+	s.billboard = BaseMaterial3D.BILLBOARD_ENABLED  # stand up toward the high camera
 	s.shaded = false
 	s.alpha_cut = SpriteBase3D.ALPHA_CUT_DISCARD
 	s.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
@@ -531,7 +535,7 @@ func _spawn_obstacles() -> void:
 	_clear_gate()
 	gate = Node3D.new()
 	world.add_child(gate)
-	gate.position.z = -maxf(4.0, speed * OBSTACLE_SECONDS)
+	gate.position.z = _offscreen_z()
 	for i in lanes:
 		# The right lane stays clear, unless time ran out and the springbok is standing in it.
 		if i == int(challenge.correctIndex) and not (chosen < 0 and i == lane):
@@ -543,6 +547,20 @@ func _spawn_obstacles() -> void:
 		if not bool(host.settings.reduceMotion):
 			o.scale = Vector3(0.2, 0.2, 0.2)
 			create_tween().tween_property(o, "scale", Vector3.ONE, 0.15).set_trans(Tween.TRANS_BACK)
+
+
+## Ground z just hidden behind the top HUD band (plus room for the obstacle's
+## height), so new obstacles slide into view rather than popping up.
+func _offscreen_z() -> float:
+	var y := top_band.get_global_rect().end.y if top_band else 0.0
+	var vp := get_viewport().get_visible_rect().size
+	var origin := cam.project_ray_origin(Vector2(vp.x / 2, y))
+	var dir := cam.project_ray_normal(Vector2(vp.x / 2, y))
+	if dir.y >= -0.01:
+		return -14.0
+	var t := -origin.y / dir.y
+	var z := origin.z + dir.z * t
+	return minf(z - 2.0, -6.0)
 
 
 ## Clear lane markings along the whole track: tinted lanes with bright dividers.
@@ -627,13 +645,20 @@ func _build_hud() -> void:
 	root.theme = Style.make_theme()
 	hud.add_child(root)
 
+	# Solid bands top and bottom frame the track; the horizon sits behind the
+	# top band, so obstacles slide in from off-screen instead of popping up.
+	top_band = PanelContainer.new()
+	top_band.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	top_band.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_band.add_theme_stylebox_override("panel", _band_style(true))
+	root.add_child(top_band)
 	var top := MarginContainer.new()
-	top.set_anchors_preset(Control.PRESET_TOP_WIDE)
 	top.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	for m in ["left", "right"]:
 		top.add_theme_constant_override("margin_" + m, 16)
 	top.add_theme_constant_override("margin_top", 14)
-	root.add_child(top)
+	top.add_theme_constant_override("margin_bottom", 12)
+	top_band.add_child(top)
 	var col := VBoxContainer.new()
 	col.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	col.add_theme_constant_override("separation", 8)
@@ -674,16 +699,18 @@ func _build_hud() -> void:
 	row2.add_child(dots)
 
 	var pp := PanelContainer.new()
-	pp.theme_type_variation = &"HudPanel"
 	pp.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	col.add_child(pp)
 	var pv := VBoxContainer.new()
 	pv.add_theme_constant_override("separation", 0)
 	pp.add_child(pv)
 	prompt_hint = _hud_label(20)
+	prompt_hint.theme_type_variation = &"MutedLabel"
 	prompt_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	pv.add_child(prompt_hint)
 	prompt_label = _hud_label(48)
+	prompt_label.theme_type_variation = &""
+	prompt_label.add_theme_color_override("font_color", Style.TEXT)
 	prompt_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	prompt_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	prompt_label.custom_minimum_size = Vector2(0, 64)
@@ -696,16 +723,20 @@ func _build_hud() -> void:
 	timer_bar.visible = false
 	col.add_child(timer_bar)
 
-	# The answers: big buttons at the bottom, one per lane, left to right.
+	# The answers: stacked buttons at the bottom; each shows its lane.
+	bottom_band = PanelContainer.new()
+	bottom_band.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	bottom_band.grow_vertical = Control.GROW_DIRECTION_BEGIN
+	bottom_band.add_theme_stylebox_override("panel", _band_style(false))
+	root.add_child(bottom_band)
 	var bottom := MarginContainer.new()
-	bottom.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
-	bottom.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	for m in ["left", "right"]:
-		bottom.add_theme_constant_override("margin_" + m, 12)
-	bottom.add_theme_constant_override("margin_bottom", 28)
-	root.add_child(bottom)
-	chips = HBoxContainer.new()
-	chips.add_theme_constant_override("separation", 6)
+		bottom.add_theme_constant_override("margin_" + m, 14)
+	bottom.add_theme_constant_override("margin_top", 12)
+	bottom.add_theme_constant_override("margin_bottom", 26)
+	bottom_band.add_child(bottom)
+	chips = VBoxContainer.new()
+	chips.add_theme_constant_override("separation", 8)
 	bottom.add_child(chips)
 
 	combo_label = _hud_label(96)
@@ -806,36 +837,70 @@ func _fill_chips(options: Array) -> void:
 	var cb := bool(host.settings.colorBlind)
 	for i in options.size():
 		var b := Button.new()
-		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.custom_minimum_size = Vector2(0, 120)
+		b.custom_minimum_size = Vector2(0, 66)
 		b.focus_mode = Control.FOCUS_NONE
 		var col: Color = Style.lane_color(i, cb)
 		for st in ["normal", "hover", "pressed", "disabled", "focus"]:
 			var sb := StyleBoxFlat.new()
 			sb.bg_color = col if st != "pressed" else col.darkened(0.15)
-			sb.set_corner_radius_all(18)
-			sb.set_content_margin_all(8)
+			sb.set_corner_radius_all(16)
+			sb.content_margin_left = 12
+			sb.content_margin_right = 12
 			sb.border_color = Color.WHITE
 			sb.set_border_width_all(0)
-			sb.shadow_color = Color(0, 0, 0, 0.25)
-			sb.shadow_size = 4
 			b.add_theme_stylebox_override(st, sb)
+		var row := HBoxContainer.new()
+		row.set_anchors_preset(Control.PRESET_FULL_RECT)
+		row.offset_left = 12
+		row.offset_right = -12
+		row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		row.add_theme_constant_override("separation", 12)
+		b.add_child(row)
+		row.add_child(_lane_marker(i, options.size()))
 		var l := Label.new()
 		l.text = str(options[i])
-		l.add_theme_font_size_override("font_size", 28 if options.size() < 4 else (24 if options.size() == 4 else 21))
+		l.add_theme_font_size_override("font_size", 27)
 		l.add_theme_color_override("font_color", Style.TEXT)
-		l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		l.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		l.size_flags_vertical = Control.SIZE_FILL
 		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		l.set_anchors_preset(Control.PRESET_FULL_RECT)
 		l.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		b.add_child(l)
+		row.add_child(l)
 		var idx: int = i
 		b.pressed.connect(func(): _select(idx))
 		chips.add_child(b)
 
 
-## After a tap: outline the chosen answer and mark the right one.
+## A tiny picture of the lanes with this button's lane filled in.
+func _lane_marker(i: int, n: int) -> Control:
+	var box := HBoxContainer.new()
+	box.add_theme_constant_override("separation", 3)
+	box.alignment = BoxContainer.ALIGNMENT_CENTER
+	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for k in n:
+		var r := ColorRect.new()
+		r.custom_minimum_size = Vector2(9, 26)
+		r.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		r.color = Style.TEXT if k == i else Color(Style.TEXT, 0.22)
+		r.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		box.add_child(r)
+	return box
+
+
+func _band_style(top: bool) -> StyleBoxFlat:
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color("#3A2416")
+	if top:
+		sb.corner_radius_bottom_left = 22
+		sb.corner_radius_bottom_right = 22
+	else:
+		sb.corner_radius_top_left = 22
+		sb.corner_radius_top_right = 22
+	sb.shadow_color = Color(0, 0, 0, 0.3)
+	sb.shadow_size = 6
+	return sb
+
 func _highlight_chip(correct: int, current: int) -> void:
 	var i := 0
 	for b in chips.get_children():
