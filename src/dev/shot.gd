@@ -11,6 +11,7 @@ func run(p_main: Node, p_dir: String) -> void:
 	dir = p_dir
 	DirAccess.make_dir_recursive_absolute(dir)
 	Game.engine.progress.placementDone = true
+	Game.engine.set_difficulty("advanced")  # show sentences in the runner
 	await _wait(1.0)
 	main.show_menu()
 	await _wait(0.8)
@@ -41,6 +42,13 @@ func run(p_main: Node, p_dir: String) -> void:
 	await _snap("08_after_crash")
 	skin.challenge = {}
 	await time_restart(main)
+	# A long (tier 4) sentence, to check the layout.
+	skin._clear_gate()
+	Game.engine.start_custom_round(["p_aangesien_die_vraag_na_plaaslike"])
+	skin.committed = true
+	skin.request_challenge()
+	await _wait(0.6)
+	await _snap("09_sentence")
 	get_tree().quit()
 
 

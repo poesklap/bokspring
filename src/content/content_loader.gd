@@ -9,7 +9,7 @@ const KINDS := ["word", "phrase"]
 const POS := ["noun", "verb", "adjective", "adverb", "interjection", "phrase", "number",
 	"pronoun", "preposition", "conjunction", "determiner", "numeral", "article"]
 const MAX_ANSWER_LEN := 28       # words: they appear on answer buttons
-const MAX_SENTENCE_LEN := 140    # phrases / sentences
+const MAX_SENTENCE_LEN := 90     # phrases / sentences (kept short on purpose)
 const MAX_EXAMPLE_LEN := 60
 
 

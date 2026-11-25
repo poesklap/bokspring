@@ -562,112 +562,464 @@
       "note": "Also the verb 'to grill'."
     },
     {
-      "id": "p_ek_is_honger",
-      "af": "Ek is honger.",
-      "en": "I'm hungry.",
+      "id": "p_ouma_het_die_deeg_oornag_in_die",
+      "af": "Ouma het die deeg in die yskas gesit sodat dit stadig kon rys.",
+      "en": "Grandma put the dough in the fridge so that it could rise slowly.",
       "unit": 4,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_ek_is_dors",
-      "af": "Ek is dors.",
-      "en": "I'm thirsty.",
-      "unit": 4,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_mag_ek_water_kry_asseblief",
-      "af": "Mag ek water kry, asseblief?",
-      "en": "May I have water, please?",
-      "unit": 4,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2
-    },
-    {
-      "id": "p_hoeveel_kos_dit",
-      "af": "Hoeveel kos dit?",
-      "en": "How much does it cost?",
-      "unit": 4,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2,
-      "note": "'Kos' also means 'food'."
-    },
-    {
-      "id": "p_dit_smaak_lekker",
-      "af": "Dit smaak lekker!",
-      "en": "It tastes good!",
-      "unit": 4,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_eet_smaaklik",
-      "af": "Eet smaaklik!",
-      "en": "Enjoy your meal!",
-      "unit": 4,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2
-    },
-    {
-      "id": "p_ek_eet_nie_vleis_nie",
-      "af": "Ek eet nie vleis nie.",
-      "en": "I don't eat meat.",
-      "unit": 4,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Double negative: nie ... nie."
+      "wrongEn": [
+        "Grandma put the dough in the oven so that it could rise slowly.",
+        "Grandma put the dough in the fridge because it had risen slowly.",
+        "Grandma put the dough in the fridge so that it could not rise.",
+        "Grandma will put the dough in the fridge so it can rise slowly."
+      ],
+      "wrongAf": [
+        "Ouma het die deeg in die yskas gesit sodat kon dit stadig rys.",
+        "Ouma het die deeg in die yskas gesit omdat dit stadig gerys het.",
+        "Ouma het die deeg in die yskas gesit sodat dit stadig kon gerys.",
+        "Ouma het die deeg in die oond gesit sodat dit stadig kon rys."
+      ],
+      "note": "'Sodat' (so that) gives a purpose and sends the verbs last: sodat dit stadig kon rys."
     },
     {
-      "id": "p_ek_het_te_veel_geeet",
-      "af": "Ek het te veel geëet.",
-      "en": "I ate too much.",
+      "id": "p_wanneer_die_kole_wit_gloei_is",
+      "af": "Wanneer die kole wit gloei, kan ons die tjops opsit.",
+      "en": "When the coals glow white, we can put the chops on.",
       "unit": 4,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Past tense: het + ge- (eet → geëet)."
+      "wrongEn": [
+        "When the coals glow red, we can put the chops on.",
+        "Before the coals glow white, we can put the chops on.",
+        "When the coals glow white, we can't put the chops on yet.",
+        "When the coals glowed white, we put the chops on."
+      ],
+      "wrongAf": [
+        "Wanneer die kole gloei wit, kan ons die tjops opsit.",
+        "Wanneer die kole wit gloei, ons kan die tjops opsit.",
+        "Voordat die kole wit gloei, kan ons die tjops opsit.",
+        "Wanneer die kole rooi gloei, kan ons die tjops opsit."
+      ],
+      "note": "'Wanneer' (when) sends 'gloei' to the end; the main clause then starts with its verb: kan ons."
     },
     {
-      "id": "p_die_koekie_is_vir_jou",
-      "af": "Die koekie is vir jou.",
-      "en": "The biscuit is for you.",
+      "id": "p_die_restaurant_waarvan_almal_so",
+      "af": "Die restaurant waarvan almal so hoog opgee, het ons teleurgestel.",
+      "en": "The restaurant everyone speaks so highly of disappointed us.",
       "unit": 4,
-      "category": "phrase",
+      "category": "relative_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Diminutive: koek → koekie.",
-      "altEn": [
-        "The cookie is for you."
-      ]
+      "wrongEn": [
+        "The restaurant everyone complains about surprised us.",
+        "The restaurant everyone speaks so highly of did not disappoint us.",
+        "We disappointed the restaurant everyone speaks so highly of.",
+        "The restaurant everyone speaks so highly of will disappoint us."
+      ],
+      "wrongAf": [
+        "Die restaurant waarvan almal so hoog gee op, het ons teleurgestel.",
+        "Die restaurant waarvan almal so hoog opgee, het ons geteleurstel.",
+        "Die restaurant waaroor almal kla, het ons verras.",
+        "Ons het die restaurant waarvan almal so hoog opgee, teleurgestel."
+      ],
+      "note": "'Hoog opgee van' = speak highly of, so 'van' becomes 'waarvan'. Separable 'opgee' stays whole at the end."
     },
     {
-      "id": "p_ek_eet_omdat_ek_honger_is",
-      "af": "Ek eet omdat ek honger is.",
-      "en": "I eat because I'm hungry.",
+      "id": "p_die_heerlike_melktert_is",
+      "af": "Die melktert is deur my klein boetie gebak, sonder Ma se hulp.",
+      "en": "The milk tart was baked by my little brother, without Mom's help.",
       "unit": 4,
-      "category": "phrase",
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The milk tart was baked for my little brother, without Mom's help.",
+        "My little brother ate the milk tart, without Mom's help.",
+        "The milk tart was baked by my little brother, with Mom's help.",
+        "The milk tart is being baked by my little brother, without Mom's help."
+      ],
+      "wrongAf": [
+        "Die melktert het deur my klein boetie gebak, sonder Ma se hulp.",
+        "Die melktert word deur my klein boetie gebak, sonder Ma se hulp.",
+        "Die melktert is vir my klein boetie gebak, sonder Ma se hulp.",
+        "Die melktert is deur my klein boetie bak, sonder Ma se hulp."
+      ],
+      "note": "Past passive: is gebak (was baked), with 'deur' for the doer. 'Het gebak' would make it active."
+    },
+    {
+      "id": "p_die_kelner_het_gevra_of_ons_nog",
+      "af": "Die kelner het gevra of ons voor tienuur nog iets wou bestel.",
+      "en": "The waiter asked whether we wanted to order anything else before ten.",
+      "unit": 4,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "We asked the waiter whether we could order anything else before ten.",
+        "The waiter said that we could not order anything else after ten.",
+        "The waiter asked whether we wanted to order anything else after ten.",
+        "The waiter asked whether we wanted to order anything else before two."
+      ],
+      "wrongAf": [
+        "Die kelner het gevra of wou ons voor tienuur nog iets bestel.",
+        "Ons het die kelner gevra of ons voor tienuur nog iets kon bestel.",
+        "Die kelner het gevra of ons voor twaalfuur nog iets wou bestel.",
+        "Die kelner het gevra of ons na tienuur nog iets wou bestel."
+      ],
+      "note": "Reported question with 'of' (whether): wou bestel goes last. Clock times are one word: tienuur."
+    },
+    {
+      "id": "p_ons_het_nerens_in_die_dorp_n",
+      "af": "Ons het nêrens 'n winkel gekry wat Sondagaand brood verkoop nie.",
+      "en": "We found no shop anywhere that sold bread on Sunday evening.",
+      "unit": 4,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "We easily found a shop that sold bread on Sunday evening.",
+        "We found no shop anywhere that sold milk on Sunday morning.",
+        "We found no shop anywhere that didn't sell bread on Sunday evening.",
+        "We won't find a shop anywhere that sells bread on Sunday evening."
+      ],
+      "wrongAf": [
+        "Ons het nêrens 'n winkel gekry wat Sondagaand brood verkoop.",
+        "Ons het nêrens 'n winkel gekry wat verkoop Sondagaand brood nie.",
+        "Ons het nêrens 'n winkel gekry wat Sondagaand brood geverkoop nie.",
+        "Ons het maklik 'n winkel gekry wat Sondagaand brood verkoop."
+      ],
+      "note": "'Nêrens ... nie' = nowhere. The closing 'nie' waits until after the relative clause 'wat ... verkoop'."
+    },
+    {
+      "id": "p_geen_van_die_gaste_het_die",
+      "af": "Geen gas het die sous geproe nie, want dit was glo vuurwarm.",
+      "en": "No guest tasted the sauce: apparently it was fiery hot.",
+      "unit": 4,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Every guest tasted the sauce: apparently it was fiery hot.",
+        "No guest liked the sauce: apparently it was fiery hot.",
+        "One guest tasted the sauce: apparently it was fiery hot.",
+        "No guest tasted the sauce: apparently it was very mild."
+      ],
+      "wrongAf": [
+        "Geen gas het die sous geproe, want dit was glo vuurwarm.",
+        "Geen gas het die sous proe nie, want dit was glo vuurwarm.",
+        "Geen gas het die sous geproe nie, want dit glo vuurwarm was.",
+        "Elke gas het die sous geproe, want dit was glo vuurwarm."
+      ],
+      "note": "'Geen ... nie' = no (not any). 'Want' (because) keeps normal order, unlike 'omdat'. Proe (taste) becomes geproe."
+    },
+    {
+      "id": "p_nadat_ons_die_hele_middag_gekook",
+      "af": "Nadat ons ure lank gekook het, het die kinders alles opgeëet.",
+      "en": "After we had cooked for hours, the children ate everything up.",
+      "unit": 4,
+      "category": "past_tense",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "After the children had cooked for hours, we ate everything up.",
+        "After we had cooked for hours, the children didn't eat a thing.",
+        "After we cook for hours, the children will eat everything up.",
+        "After we had cooked for hours, the children threw everything away."
+      ],
+      "wrongAf": [
+        "Nadat ons ure lank gekook het, het die kinders alles geopeet.",
+        "Nadat ons ure lank gekook het, die kinders het alles opgeëet.",
+        "Nadat ons ure lank gekook het, het die kinders alles opeet.",
+        "Nadat die kinders ure lank gekook het, het ons alles opgeëet."
+      ],
+      "note": "opeet becomes opgeëet: ge- goes after 'op', and the diaeresis (ë) shows a new syllable starts."
+    },
+    {
+      "id": "p_jy_moes_die_koek_nie_so_lank_in",
+      "af": "Jy moes die koek nie so lank gebak het nie; nou is dit pikswart.",
+      "en": "You shouldn't have baked the cake so long; now it's pitch-black.",
+      "unit": 4,
+      "category": "modal",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "You didn't bake the cake long enough; now it's pitch-black.",
+        "You should have baked the cake longer; now it's raw.",
+        "You shouldn't bake the cake so long, or it will be pitch-black.",
+        "You had to bake the cake so long; now it's golden-brown."
+      ],
+      "wrongAf": [
+        "Jy moes die koek nie so lank gebak het; nou is dit pikswart.",
+        "Jy moes die koek nie so lank bak het nie; nou is dit pikswart.",
+        "Jy moes die koek nie so lank gebak het nie; nou dit is pikswart.",
+        "Jy moes die koek langer gebak het; nou is dit rou."
+      ],
+      "note": "moes + ge- + het = should have: moes ... gebak het. With 'nie' it means shouldn't have."
+    },
+    {
+      "id": "p_ek_het_per_ongeluk_die_suiker",
+      "af": "Ek het suiker met sout verwar, en nou is die pap gekrap.",
+      "en": "I confused sugar with salt, and now the damage is done.",
+      "unit": 4,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "I confused sugar with salt, and now the porridge is stirred.",
+        "I confused salt with sugar, but no harm was done.",
+        "I mixed sugar with salt, and now the porridge is burnt.",
+        "I nearly confused sugar with salt, but caught it in time."
+      ],
+      "wrongAf": [
+        "Ek het suiker met sout verwar, en nou die pap is gekrap.",
+        "Ek het suiker met sout geverwar, en nou is die pap gekrap.",
+        "Ek het suiker met sout verwar, en nou word die pap gekrap.",
+        "Ek het suiker met sout verwar, maar die pap is nie gekrap nie."
+      ],
+      "note": "'Nou is die pap gekrap' = now the damage is done (literally: now the porridge has been stirred)."
+    },
+    {
+      "id": "p_die_ou_ketel_het_op_die_stoof",
+      "af": "Die ketel het op die stoof staan en fluit, asof dit ons roep.",
+      "en": "The kettle stood whistling on the stove, as if it were calling us.",
+      "unit": 4,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The kettle stood quietly on the stove, as if it were waiting for us.",
+        "The kettle stood whistling on the stove, because we were calling it.",
+        "We stood whistling at the kettle on the stove, as if calling it.",
+        "The kettle stood whistling on the stove, as if it were mocking us."
+      ],
+      "wrongAf": [
+        "Die ketel het op die stoof staan en fluit, asof dit roep ons.",
+        "Die ketel het stil op die stoof gestaan, asof dit vir ons wag.",
+        "Die ketel het op die stoof staan en fluit, asof ons dit roep.",
+        "Die ketel het op die stoof staan en fluit, omdat ons dit roep."
+      ],
+      "note": "Personification: the kettle calls like a person. 'Het staan en fluit' = stood whistling (no ge-)."
+    },
+    {
+      "id": "p_elke_saterdagoggend_koop_ons",
+      "af": "Elke Saterdagoggend koop ons tuisgebakte brood by die boeremark.",
+      "en": "Every Saturday morning we buy home-baked bread at the farmers' market.",
+      "unit": 4,
+      "category": "inversion",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Every Sunday morning we buy home-baked bread at the farmers' market.",
+        "Every Saturday we sell home-baked bread at the farmers' market.",
+        "Last Saturday we bought home-baked bread at the farmers' market.",
+        "Every Saturday morning we buy stale bread at the farmers' market."
+      ],
+      "wrongAf": [
+        "Elke Saterdagoggend ons koop tuisgebakte brood by die boeremark.",
+        "Elke Saterdagoggend verkoop ons tuisgebakte brood by die boeremark.",
+        "Elke Sondagoggend koop ons tuisgebakte brood by die boeremark.",
+        "Elke Saterdagoggend koop ons tuisgebak brood by die boeremark."
+      ],
+      "note": "A time phrase first pushes the verb before the subject: koop ons. Before a noun: tuisgebakte brood."
+    },
+    {
+      "id": "p_as_die_sjef_die_vis_net_n_paar",
+      "af": "As die sjef die vis korter gebraai het, sou dit sag en sappig gebly het.",
+      "en": "If the chef had fried the fish for less time, it would have stayed soft and juicy.",
+      "unit": 4,
+      "category": "modal",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 4,
-      "note": "After 'omdat' the verb goes to the end."
+      "wrongEn": [
+        "Because the chef fried the fish for less time, it stayed soft and juicy.",
+        "If the chef had fried the fish for longer, it would have stayed soft and juicy.",
+        "If the chef had fried the fish for less time, it would have gone dry and tough.",
+        "If the chef fries the fish for less time, it will stay soft and juicy."
+      ],
+      "wrongAf": [
+        "As die sjef die vis korter gebraai het, dit sou sag en sappig gebly het.",
+        "As die sjef die vis korter het gebraai, sou dit sag en sappig gebly het.",
+        "As die sjef die vis korter gebraai het, sou dit sag en sappig bly het.",
+        "Omdat die sjef die vis korter gebraai het, het dit sag en sappig gebly."
+      ],
+      "note": "Unreal past: as ... gebraai het, sou ... gebly het (if ... had fried, ... would have stayed)."
+    },
+    {
+      "id": "p_toe_dit_aan_die_lig_kom_dat_die",
+      "af": "Toe dit aan die lig kom dat die sap vervals is, is alles van die rakke verwyder.",
+      "en": "When it came out that the juice was adulterated, it was all pulled from the shelves.",
+      "unit": 4,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "When it came out that the juice was adulterated, it was all put back on the shelves.",
+        "When it came out that the juice was pure, it was all pulled from the shelves.",
+        "Once it was all pulled from the shelves, it came out that the juice was adulterated.",
+        "When it came out that the juice was adulterated, only some was pulled."
+      ],
+      "wrongAf": [
+        "Toe dit aan die lig kom dat die sap vervals is, alles is van die rakke verwyder.",
+        "Toe dit aan die lig kom dat die sap vervals is, het alles van die rakke verwyder.",
+        "Toe dit aan die lig kom dat die sap is vervals, is alles van die rakke verwyder.",
+        "Toe dit aan die lig kom dat die sap vervals is, is alles van die rakke geverwyder."
+      ],
+      "note": "Two past passives (vervals is, is verwyder). 'Aan die lig kom' = come to light. Ver- verbs take no ge-."
+    },
+    {
+      "id": "p_die_gasvryheid_waarvoor_die",
+      "af": "Die gasvryheid waarvoor die Karoo bekend is, het ons heeltemal oorweldig.",
+      "en": "The hospitality the Karoo is known for completely overwhelmed us.",
+      "unit": 4,
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The hospitality the Karoo is known for completely disappointed us.",
+        "The hospitality the Karoo is known for left us completely cold.",
+        "We completely overwhelmed the Karoo with our hospitality.",
+        "The hospitality the Karoo was once known for will overwhelm us."
+      ],
+      "wrongAf": [
+        "Die gasvryheid waarvan die Karoo bekend is, het ons heeltemal oorweldig.",
+        "Die gasvryheid waarvoor die Karoo is bekend, het ons heeltemal oorweldig.",
+        "Die gasvryheid waarvoor die Karoo bekend is, het ons heeltemal geoorweldig.",
+        "Die gasvryheid waarvoor die Karoo bekend is, het ons heeltemal teleurgestel."
+      ],
+      "note": "'Bekend vir' (known for) becomes 'waarvoor' ('bekend om' gives 'waarom'). Oorweldig is stressed on -wel-, so no ge-."
+    },
+    {
+      "id": "p_die_inspekteur_het_die_eienaar",
+      "af": "Die inspekteur het gewaarsku dat die kombuis gesluit sou word indien dit vuil bly.",
+      "en": "The inspector warned that the kitchen would be closed if it stayed dirty.",
+      "unit": 4,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The inspector warned that the kitchen would be closed even if it was cleaned.",
+        "The owner warned that the kitchen would be closed if it stayed dirty.",
+        "The inspector said that the kitchen had been closed because it was dirty.",
+        "The inspector warned that the kitchen would be cleaned if it stayed closed."
+      ],
+      "wrongAf": [
+        "Die inspekteur het gewaarsku dat die kombuis gesluit sou word indien dit bly vuil.",
+        "Die inspekteur het gewaarsku dat die kombuis gesluit sou word indien dit skoon bly.",
+        "Die eienaar het gewaarsku dat die kombuis gesluit sou word indien dit vuil bly.",
+        "Die inspekteur het gewaarsku dat die kombuis gesluit is omdat dit vuil was."
+      ],
+      "note": "A reported warning with a passive in the past (gesluit sou word = would be closed). 'Indien' (if) sends 'bly' last."
+    },
+    {
+      "id": "p_na_die_droogte_was_vars_groente",
+      "af": "Na die droogte was groente so skaars soos hoendertande, en pryse het die hoogte ingeskiet.",
+      "en": "After the drought, vegetables were as scarce as hen's teeth, and prices shot up.",
+      "unit": 4,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "After the drought, vegetables were plentiful, and prices dropped.",
+        "After the drought, hens' teeth and vegetables were scarce, and prices shot up.",
+        "Before the drought, vegetables were as scarce as hen's teeth, and prices shot up.",
+        "After the drought, vegetables were as scarce as hen's teeth, yet prices stayed low."
+      ],
+      "wrongAf": [
+        "Na die droogte groente was so skaars soos hoendertande, en pryse het die hoogte ingeskiet.",
+        "Na die droogte was groente so skaars soos hoendertande, en pryse het die hoogte geinskiet.",
+        "Na die droogte was groente so skaars soos hoendertande, en pryse het die laagte ingeskiet.",
+        "Na die droogte was groente volop, en pryse het gedaal."
+      ],
+      "note": "Two idioms: 'so skaars soos hoendertande' (extremely rare) and 'die hoogte inskiet' (shoot up)."
+    },
+    {
+      "id": "p_die_geur_van_kaneel_en_naeltjies",
+      "af": "Die geur van kaneel het soos 'n onsigbare hand elke gas kombuis toe gelok.",
+      "en": "The smell of cinnamon lured every guest to the kitchen like an invisible hand.",
+      "unit": 4,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "An invisible hand carried cinnamon through the house to every guest.",
+        "The smell of cinnamon drove every guest out of the kitchen like a thick fog.",
+        "The smell of cinnamon drifted away because every guest was in the kitchen.",
+        "The smell of ginger lured every guest to the garden like an invisible hand."
+      ],
+      "wrongAf": [
+        "Die geur van kaneel het soos 'n onsigbare hand elke gas kombuis toe lok.",
+        "Die geur van kaneel soos 'n onsigbare hand het elke gas kombuis toe gelok.",
+        "'n Onsigbare hand het die kaneel na elke gas in die kombuis gedra.",
+        "Die geur van kaneel het soos 'n digte mis elke gas uit die kombuis verdryf."
+      ],
+      "note": "A simile with personification: the smell acts like a hand. 'Kombuis toe' = to the kitchen; lok becomes gelok."
+    },
+    {
+      "id": "p_ouma_het_nooit_n_resep",
+      "af": "Ouma het nooit resepte neergeskryf nie, en niemand kon haar melktert nog ooit namaak nie.",
+      "en": "Grandma never wrote down recipes, and nobody has ever managed to copy her milk tart.",
+      "unit": 4,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Grandma always wrote down recipes, so everybody has managed to copy her milk tart.",
+        "Grandma never wrote down recipes, but somebody has managed to copy her milk tart.",
+        "Grandma never read recipes, and nobody has ever managed to copy her milk tart.",
+        "Grandma never wrote down recipes, and she never managed to copy anyone's milk tart."
+      ],
+      "wrongAf": [
+        "Ouma het nooit resepte neergeskryf, en niemand kon haar melktert nog ooit namaak nie.",
+        "Ouma het nooit resepte geneerskryf nie, en niemand kon haar melktert nog ooit namaak nie.",
+        "Ouma het nooit resepte neergeskryf nie, en niemand kon haar melktert nog ooit namaak.",
+        "Ouma het altyd resepte neergeskryf, en almal kon haar melktert namaak."
+      ],
+      "note": "Two negative clauses, each closed by its own 'nie': nooit ... nie and niemand ... nie."
+    },
+    {
+      "id": "p_aangesien_die_vraag_na_plaaslike",
+      "af": "Aangesien die vraag toeneem, oorweeg die supermark dit om plaaslike boere aan te stel.",
+      "en": "Since demand is growing, the supermarket is considering taking on local farmers.",
+      "unit": 4,
+      "category": "subordinate_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Since demand is falling, the supermarket is considering dropping local farmers.",
+        "Since demand is growing, the supermarket has already taken on local farmers.",
+        "Since the supermarket took on local farmers, demand has grown.",
+        "Although demand is growing, the supermarket is not considering local farmers."
+      ],
+      "wrongAf": [
+        "Aangesien die vraag neem toe, oorweeg die supermark dit om plaaslike boere aan te stel.",
+        "Aangesien die vraag toeneem, die supermark oorweeg dit om plaaslike boere aan te stel.",
+        "Aangesien die vraag toeneem, oorweeg die supermark dit om plaaslike boere te aanstel.",
+        "Aangesien die vraag afneem, oorweeg die supermark dit om plaaslike boere af te dank."
+      ],
+      "note": "Separable verbs stay whole at the end of a subordinate clause (toeneem) but split around 'te': aan te stel."
     }
   ]
 }

@@ -151,6 +151,42 @@
         }
       ],
       "showAfterLevel": 8
+    },
+    {
+      "id": "tip_verb_final",
+      "titleEn": "Verb last after nadat, hoewel, aangesien",
+      "bodyEn": "Linking words like nadat (after), hoewel (although), aangesien (since), terwyl (while) and sodat (so that) push the verb to the end of their clause. If that clause comes first, the next clause starts with its verb.",
+      "examples": [
+        {
+          "af": "Hoewel dit koud is, gaan ons swem.",
+          "en": "Although it's cold, we're going swimming."
+        },
+        {
+          "af": "Nadat hy geëet het, het hy geslaap.",
+          "en": "After he had eaten, he slept."
+        }
+      ],
+      "showAfterLevel": 9
+    },
+    {
+      "id": "tip_passive",
+      "titleEn": "The passive: word and is",
+      "bodyEn": "For something being done now, use word + past participle. For something that was done, swap word for is. Name the doer with deur (by). Watch out: 'is gebak' means 'was baked' (or 'has been baked'), not 'is being baked'.",
+      "examples": [
+        {
+          "af": "Die brood word gebak.",
+          "en": "The bread is being baked."
+        },
+        {
+          "af": "Die brood is gebak.",
+          "en": "The bread was baked."
+        },
+        {
+          "af": "Die brood is deur Ma gebak.",
+          "en": "The bread was baked by Mom."
+        }
+      ],
+      "showAfterLevel": 10
     }
   ]
 }

@@ -703,97 +703,464 @@
       "exampleEn": "Next year I'm going overseas."
     },
     {
-      "id": "p_hoe_laat_is_dit",
-      "af": "Hoe laat is dit?",
-      "en": "What time is it?",
+      "id": "p_indien_die_trein_meer_as_twintig",
+      "af": "Indien die trein twintig minute laat is, mis ons die vergadering.",
+      "en": "If the train is twenty minutes late, we will miss the meeting.",
       "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_dit_is_drie_uur",
-      "af": "Dit is drie-uur.",
-      "en": "It's three o'clock.",
-      "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_dit_is_half_drie",
-      "af": "Dit is half drie.",
-      "en": "It's half past two.",
-      "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2,
-      "note": "'Half drie' = half-way to three, so 2:30."
-    },
-    {
-      "id": "p_dit_is_kwart_oor_vier",
-      "af": "Dit is kwart oor vier.",
-      "en": "It's quarter past four.",
-      "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2
-    },
-    {
-      "id": "p_watter_dag_is_dit_vandag",
-      "af": "Watter dag is dit vandag?",
-      "en": "What day is it today?",
-      "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2
-    },
-    {
-      "id": "p_ek_is_twintig_jaar_oud",
-      "af": "Ek is twintig jaar oud.",
-      "en": "I am twenty years old.",
-      "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2
-    },
-    {
-      "id": "p_sien_jou_more",
-      "af": "Sien jou môre!",
-      "en": "See you tomorrow!",
-      "unit": 2,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_ek_het_gister_gewerk",
-      "af": "Ek het gister gewerk.",
-      "en": "I worked yesterday.",
-      "unit": 2,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Past tense: het + ge- (werk → gewerk)."
+      "wrongEn": [
+        "If the train is twelve minutes late, we will miss the meeting.",
+        "Although the train is twenty minutes late, we will make the meeting.",
+        "Because the train was twenty minutes late, we missed the meeting.",
+        "If the train is twenty minutes early, we will miss the meeting."
+      ],
+      "wrongAf": [
+        "Indien die trein is twintig minute laat, mis ons die vergadering.",
+        "Indien die trein twintig minute laat is, ons mis die vergadering.",
+        "Indien die trein twaalf minute laat is, mis ons die vergadering.",
+        "Indien die trein twintig minute vroeg is, mis ons die vergadering."
+      ],
+      "note": "'Indien' (if) is formal for 'as'. Its verb goes last (laat is), and the main clause inverts: mis ons."
     },
     {
-      "id": "p_ons_het_om_agtuur_geeet",
-      "af": "Ons het om agtuur geëet.",
-      "en": "We ate at eight o'clock.",
+      "id": "p_voordat_die_klok_om_kwart_oor",
+      "af": "Voordat die klok om kwart oor sewe lui, moet almal sit.",
+      "en": "Before the bell rings at quarter past seven, everyone must be seated.",
       "unit": 2,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Past of 'eet' is 'geëet'; the ë splits the vowels."
+      "wrongEn": [
+        "Before the bell rings at quarter to seven, everyone must be seated.",
+        "After the bell rings at quarter past seven, everyone must be seated.",
+        "Before the bell rings at quarter past seven, nobody may sit.",
+        "Before the bell rang at quarter past seven, everyone was seated."
+      ],
+      "wrongAf": [
+        "Voordat die klok om kwart oor sewe lui, almal moet sit.",
+        "Voordat lui die klok om kwart oor sewe, moet almal sit.",
+        "Voordat die klok om kwart voor sewe lui, moet almal sit.",
+        "Nadat die klok om kwart oor sewe lui, moet almal sit."
+      ],
+      "note": "'Voordat' (before) sends 'lui' to the end. Kwart oor sewe = 7:15; kwart voor sewe = 6:45."
+    },
+    {
+      "id": "p_die_horlosie_wat_my_oupa_my_op",
+      "af": "Die horlosie wat Oupa my op my sestiende gegee het, loop nog.",
+      "en": "The watch Grandpa gave me on my sixteenth birthday still works.",
+      "unit": 2,
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The watch I gave Grandpa on his sixteenth birthday still works.",
+        "The watch Grandpa gave me on my sixth birthday still works.",
+        "The watch Grandpa gave me on my sixteenth birthday has stopped.",
+        "The watch Grandpa gave me on my sixtieth birthday still works."
+      ],
+      "wrongAf": [
+        "Die horlosie wat Oupa my op my sestiende het gegee, loop nog.",
+        "Die horlosie wat Oupa my op my sestiende gegee het, loop nie meer nie.",
+        "Die horlosie wat ek Oupa op sy sestiende gegee het, loop nog.",
+        "Die horlosie wat Oupa my op my sesde gegee het, loop nog."
+      ],
+      "note": "The relative clause 'wat ... gegee het' ends with its verbs, then a comma and the main verb: loop. Ordinal: sestiende."
+    },
+    {
+      "id": "p_die_wedstryd_is_weens_swaar_reen",
+      "af": "Die wedstryd is weens reën van Saterdag na Woensdag uitgestel.",
+      "en": "Because of rain, the match was postponed from Saturday to Wednesday.",
+      "unit": 2,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Because of rain, the match was moved from Wednesday to Saturday.",
+        "Because of rain, the match is being postponed to Wednesday.",
+        "Despite the rain, the match was played on Saturday.",
+        "Because of rain, the match was postponed from Sunday to Wednesday."
+      ],
+      "wrongAf": [
+        "Die wedstryd word weens reën van Saterdag na Woensdag uitgestel.",
+        "Die wedstryd is weens reën van Saterdag na Woensdag geuitstel.",
+        "Die wedstryd het weens reën van Saterdag na Woensdag uitgestel.",
+        "Die wedstryd is weens reën van Sondag na Woensdag uitgestel."
+      ],
+      "note": "Past passive: is uitgestel (was postponed). Separable uitstel puts ge- in the middle: uitgestel."
+    },
+    {
+      "id": "p_die_onderwyser_het_aangekondig",
+      "af": "Juffrou het aangekondig dat die toets na die vyftiende verskuif is.",
+      "en": "The teacher announced that the test had been moved to the 15th.",
+      "unit": 2,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The teacher announced that the test had been moved from the 15th.",
+        "The teacher asked whether the test could be moved to the 15th.",
+        "The teacher announced that the test had been moved to the 5th.",
+        "The teacher announced that the test had been moved to the 16th."
+      ],
+      "wrongAf": [
+        "Juffrou het aangekondig dat die toets is na die vyftiende verskuif.",
+        "Juffrou het aangekondig dat die toets na die vyftiende geverskuif is.",
+        "Juffrou het gevra of die toets na die vyftiende verskuif kan word.",
+        "Juffrou het aangekondig dat die toets na die vyfde verskuif is."
+      ],
+      "note": "Reported statement with 'dat' plus a passive: verskuif is goes last. Ver- verbs take no ge-. Juffrou = the (female) teacher."
+    },
+    {
+      "id": "p_my_suster_wou_weet_hoe_laat_die",
+      "af": "My suster wou weet hoe laat die bus Saterdag vertrek.",
+      "en": "My sister wanted to know what time the bus leaves on Saturday.",
+      "unit": 2,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "My sister wanted to know what time the bus arrives on Saturday.",
+        "My sister told me what time the bus leaves on Saturday.",
+        "My sister wanted to know what time the bus leaves on Sunday.",
+        "I wanted to know from my sister when the bus leaves on Saturday."
+      ],
+      "wrongAf": [
+        "My suster wou weet hoe laat vertrek die bus Saterdag.",
+        "My suster wou weet hoe laat die bus Saterdag aankom.",
+        "My suster het gesê hoe laat die bus Saterdag vertrek.",
+        "My suster wou weet hoe laat die bus Sondag vertrek."
+      ],
+      "note": "Reported questions with 'hoe laat' (what time) use statement order: the verb goes to the end."
+    },
+    {
+      "id": "p_daar_is_geen_bus_wat_op_sondae",
+      "af": "Daar is geen bus wat Sondae ry nie, dus moet jy 'n taxi kry.",
+      "en": "There is no bus that runs on Sundays, so you must get a taxi.",
+      "unit": 2,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "There is a bus that runs on Sundays, so you needn't get a taxi.",
+        "There is no bus that runs on Saturdays, so you must get a taxi.",
+        "There is no taxi that runs on Sundays, so you must get a bus.",
+        "There is no bus that runs on Sundays, so you mustn't get a taxi."
+      ],
+      "wrongAf": [
+        "Daar is geen bus wat Sondae ry, dus moet jy 'n taxi kry.",
+        "Daar is geen bus wat Sondae ry nie, dus jy moet 'n taxi kry.",
+        "Daar is geen bus wat ry Sondae nie, dus moet jy 'n taxi kry.",
+        "Daar is 'n bus wat Sondae ry, dus hoef jy nie 'n taxi te kry nie."
+      ],
+      "note": "'Geen ... nie' (no ...): the 'nie' comes after the relative clause. 'Dus' (so) is followed by the verb."
+    },
+    {
+      "id": "p_ek_het_die_hele_oggend_gesoek",
+      "af": "Ek het ure lank gesoek, maar my dagboek was nêrens te vinde nie.",
+      "en": "I searched for hours, but my diary was nowhere to be found.",
+      "unit": 2,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "I searched for hours and finally found my diary.",
+        "I searched for a day, but my diary was nowhere to be found.",
+        "I searched for hours, but my diary was where I had left it.",
+        "I searched for hours, but my appointments weren't in my diary."
+      ],
+      "wrongAf": [
+        "Ek het ure lank gesoek, maar my dagboek was nêrens te vinde.",
+        "Ek het ure lank gesoek, maar my dagboek was nie nêrens te vinde nie.",
+        "Ek het ure lank soek, maar my dagboek was nêrens te vinde nie.",
+        "Ek het ure lank gesoek en my dagboek uiteindelik gevind."
+      ],
+      "note": "'Nêrens ... nie' = nowhere. Don't add a second 'nie' before 'nêrens'; it already carries the negation."
+    },
+    {
+      "id": "p_die_eerste_keer_wat_ek_die",
+      "af": "Die eerste keer het ek die marathon in net onder vier uur voltooi.",
+      "en": "The first time, I finished the marathon in just under four hours.",
+      "unit": 2,
+      "category": "past_tense",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The first time, I finished the marathon in just over four hours.",
+        "The first time, I finished the marathon at just before four o'clock.",
+        "The last time, I finished the marathon in just under four hours.",
+        "Next time I will finish the marathon in under four hours."
+      ],
+      "wrongAf": [
+        "Die eerste keer ek het die marathon in net onder vier uur voltooi.",
+        "Die eerste keer het ek die marathon in net onder vier uur gevoltooi.",
+        "Die eerste keer het ek die marathon in net onder vieruur voltooi.",
+        "Die laaste keer het ek die marathon in net oor vier uur voltooi."
+      ],
+      "note": "vier uur (apart) = four hours; vieruur (one word) = four o'clock. Voltooi takes no ge- (stress on -tooi)."
+    },
+    {
+      "id": "p_omdat_oupa_elke_oggend_om_vyfuur",
+      "af": "Omdat Oupa om vyfuur opstaan, gaan hy met die hoenders slaap.",
+      "en": "Because Grandpa gets up at five, he goes to bed very early.",
+      "unit": 2,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Because Grandpa gets up at five, he sleeps with the chickens.",
+        "Because Grandpa goes to bed very early, he gets up at five.",
+        "Because Grandpa gets up at four, he goes to bed very early.",
+        "Although Grandpa gets up at five, he goes to bed very late."
+      ],
+      "wrongAf": [
+        "Omdat Oupa om vyfuur opstaan, hy gaan met die hoenders slaap.",
+        "Omdat Oupa staan om vyfuur op, gaan hy met die hoenders slaap.",
+        "Omdat Oupa met die hoenders gaan slaap, staan hy om vyfuur op.",
+        "Omdat Oupa om vieruur opstaan, gaan hy met die hoenders slaap."
+      ],
+      "note": "'Met die hoenders gaan slaap' = to go to bed very early (literally: go to sleep with the chickens)."
+    },
+    {
+      "id": "p_die_horlosie_teen_die",
+      "af": "Die horlosie het die minute stadig afgetel, asof dit ons wou terg.",
+      "en": "The clock slowly counted down the minutes, as if to tease us.",
+      "unit": 2,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The clock quickly counted down the minutes, as if to help us.",
+        "We slowly counted down the minutes, as if to tease the clock.",
+        "The clock slowly counted down the hours, because it hated us.",
+        "The clock stopped during the last minutes, as if to tease us."
+      ],
+      "wrongAf": [
+        "Die horlosie het die minute stadig afgetel, asof dit wou ons terg.",
+        "Die horlosie het die minute stadig geaftel, asof dit ons wou terg.",
+        "Die horlosie het die minute vinnig afgetel, asof dit ons wou help.",
+        "Ons het die minute stadig afgetel, asof ons die horlosie wou terg."
+      ],
+      "note": "Personification (verpersoonliking): the clock acts like a person. 'Asof' (as if) sends the verbs last."
+    },
+    {
+      "id": "p_op_die_twee_en_twintigste_van",
+      "af": "Op die twee-en-twintigste vier my ouers hulle dertigste troudag.",
+      "en": "On the twenty-second my parents celebrate their thirtieth anniversary.",
+      "unit": 2,
+      "category": "inversion",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "On the twelfth my parents celebrate their thirtieth anniversary.",
+        "On the 22nd my parents celebrate their thirteenth anniversary.",
+        "On the 22nd my parents celebrated their thirtieth anniversary.",
+        "On the second my parents celebrate their thirtieth anniversary."
+      ],
+      "wrongAf": [
+        "Op die twee-en-twintigste my ouers vier hulle dertigste troudag.",
+        "Op die twee-en-twintigste vier my ouers hulle dertiende troudag.",
+        "Op die twaalfde vier my ouers hulle dertigste troudag.",
+        "Op die twee-en-twintig vier my ouers hulle dertigste troudag."
+      ],
+      "note": "A date placed first pushes the verb before the subject: vier my ouers. Ordinals: twee-en-twintigste, dertigste. Troudag = wedding anniversary."
+    },
+    {
+      "id": "p_as_ons_gisteraand_vroeer_vertrek",
+      "af": "As ons gisteraand vroeër vertrek het, sou ons nie die begin van die fliek gemis het nie.",
+      "en": "If we had left earlier last night, we would not have missed the start of the film.",
+      "unit": 2,
+      "category": "modal",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "If we had left later last night, we would not have missed the start of the film.",
+        "Because we left earlier last night, we did not miss the start of the film.",
+        "If we had left earlier last night, we would have missed the start of the film.",
+        "If we leave earlier tonight, we will not miss the start of the film."
+      ],
+      "wrongAf": [
+        "As ons gisteraand vroeër vertrek het, ons sou nie die begin van die fliek gemis het nie.",
+        "As ons gisteraand vroeër het vertrek, sou ons nie die begin van die fliek gemis het nie.",
+        "As ons gisteraand vroeër vertrek het, sou ons nie die begin van die fliek gemis het.",
+        "Omdat ons gisteraand vroeër vertrek het, het ons nie die begin van die fliek gemis nie."
+      ],
+      "note": "Unreal past: as ... het, sou ... het (if we had ..., we would have ...). Negated, it still ends with 'nie'."
+    },
+    {
+      "id": "p_die_jaarlikse_begroting_wat",
+      "af": "Die begroting, wat in Maart goedgekeur sou word, is weens onenigheid tot Junie uitgestel.",
+      "en": "The budget, which was to be approved in March, was put off until June over disagreement.",
+      "unit": 2,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The budget, which was approved in March, was put off until June over disagreement.",
+        "The budget, which was to be approved in June, was brought forward to March.",
+        "The budget, due in March, was approved in June despite disagreement.",
+        "The budget, which was to be approved in March, was put off until July."
+      ],
+      "wrongAf": [
+        "Die begroting, wat in Maart goedgekeur sou word, het weens onenigheid tot Junie uitgestel.",
+        "Die begroting, wat in Maart goedgekeur sou word, is weens onenigheid tot Junie geuitstel.",
+        "Die begroting, wat in Maart gegoedkeur sou word, is weens onenigheid tot Junie uitgestel.",
+        "Die begroting, wat in Maart goedgekeur is, is weens onenigheid tot Junie uitgestel."
+      ],
+      "note": "Two passives: goedgekeur sou word (was to be approved) and is uitgestel (was postponed)."
+    },
+    {
+      "id": "p_die_stiptelikheid_waarop_ons",
+      "af": "Die stiptelikheid waarop ons treine eens trots was, het plek gemaak vir vertragings.",
+      "en": "The punctuality our trains were once proud of has given way to delays.",
+      "unit": 2,
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The delays our trains were once ashamed of have given way to punctuality.",
+        "The punctuality our trains are still proud of has reduced the delays.",
+        "The punctuality our trains were once proud of will give way to delays.",
+        "The speed our trains were once proud of has given way to delays."
+      ],
+      "wrongAf": [
+        "Die stiptelikheid waarvan ons treine eens trots was, het plek gemaak vir vertragings.",
+        "Die stiptelikheid waarop ons treine was eens trots, het plek gemaak vir vertragings.",
+        "Die stiptelikheid waarop ons treine eens trots was, het plek maak vir vertragings.",
+        "Die stiptelikheid waarop ons treine nog trots is, het die vertragings verminder."
+      ],
+      "note": "'Trots op' (proud of) becomes 'waarop' in a relative clause. 'Plek maak vir' = give way to."
+    },
+    {
+      "id": "p_die_woordvoerder_het_ontken_dat",
+      "af": "Die woordvoerder het ontken dat die rooster sonder oorlegpleging ingestel is.",
+      "en": "The spokesperson denied that the roster had been introduced without consultation.",
+      "unit": 2,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The spokesperson admitted that the roster had been introduced without consultation.",
+        "The spokesperson denied that the roster had been introduced after consultation.",
+        "The union denied that the roster had been introduced without consultation.",
+        "The spokesperson denied that the roster would be introduced without consultation."
+      ],
+      "wrongAf": [
+        "Die woordvoerder het ontken dat die rooster is sonder oorlegpleging ingestel.",
+        "Die woordvoerder het geontken dat die rooster sonder oorlegpleging ingestel is.",
+        "Die woordvoerder het erken dat die rooster sonder oorlegpleging ingestel is.",
+        "Die vakbond het ontken dat die rooster sonder oorlegpleging ingestel is."
+      ],
+      "note": "Reported denial with a passive: dat ... ingestel is. Ont- verbs take no ge-: ontken. Separable instel: ingestel."
+    },
+    {
+      "id": "p_hy_skuif_sy_take_altyd_op_die",
+      "af": "Hy skuif alles op die lange baan, en gevolglik moes hy gisteraand tot middernag werk.",
+      "en": "He puts everything off, and consequently he had to work until midnight last night.",
+      "unit": 2,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "He pushes everything onto the long track, so he had to work until midnight.",
+        "He does everything early, so he could go to bed before midnight last night.",
+        "He puts everything off, but last night he still went to bed early.",
+        "He never puts anything off, yet he had to work until midnight last night."
+      ],
+      "wrongAf": [
+        "Hy skuif alles op die lange baan, en gevolglik hy moes gisteraand tot middernag werk.",
+        "Hy skuif alles op die lange baan, en gevolglik moes hy gisteraand tot middernag gewerk.",
+        "Hy skuif alles op die kort baan, en gevolglik moes hy gisteraand tot middernag werk.",
+        "Hy doen alles betyds, en gevolglik kon hy gisteraand voor middernag gaan slaap."
+      ],
+      "note": "'Iets op die lange baan skuif' = to put something off. 'Gevolglik' (consequently) is followed by the verb: moes hy."
+    },
+    {
+      "id": "p_die_tyd_is_n_rivier_wat_niemand",
+      "af": "Die tyd is 'n rivier wat niemand kan keer nie: dit spoel ons jare verby.",
+      "en": "Time is a river that nobody can stop: it washes our years past.",
+      "unit": 2,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Time is a river that everybody can stop: it washes our years past.",
+        "A river that nobody could stop washed our years away.",
+        "Time is a river that nobody can cross: it washes our years past.",
+        "Time is a river that nobody can stop: it washed our house away."
+      ],
+      "wrongAf": [
+        "Die tyd is 'n rivier wat niemand kan keer: dit spoel ons jare verby.",
+        "Die tyd is 'n rivier wat niemand keer kan nie: dit spoel ons jare verby.",
+        "Die tyd is 'n rivier wat niemand kan keer nie: dit verbyspoel ons jare.",
+        "Die tyd is 'n rivier wat niemand kan oorsteek nie: dit spoel ons jare verby."
+      ],
+      "note": "An extended metaphor: time IS a river. The separable verb verbyspoel splits in a main clause: spoel ... verby."
+    },
+    {
+      "id": "p_nooit_tevore_is_soveel",
+      "af": "Nooit tevore is soveel deelnemers op een dag ingeskryf nie: meer as vierduisend!",
+      "en": "Never before had so many entrants been registered in one day: over four thousand!",
+      "unit": 2,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Never before had so few entrants been registered in one day: under four hundred!",
+        "So many entrants are often registered in one day: over four thousand!",
+        "Never before had so many entrants been registered in one day: over 14,000!",
+        "Never before had so many entrants been registered in one day: over four hundred!"
+      ],
+      "wrongAf": [
+        "Nooit tevore soveel deelnemers is op een dag ingeskryf nie: meer as vierduisend!",
+        "Nooit tevore is soveel deelnemers op een dag ingeskryf: meer as vierduisend!",
+        "Nooit tevore is soveel deelnemers op een dag geinskryf nie: meer as vierduisend!",
+        "Nooit tevore is soveel deelnemers op een dag ingeskryf nie: meer as vierhonderd!"
+      ],
+      "note": "'Nooit tevore' (never before) placed first forces inversion (is soveel deelnemers) and still needs 'nie'."
+    },
+    {
+      "id": "p_hoewel_die_verskuiwing_van_die",
+      "af": "Hoewel die verskuiwing van die sperdatum verligting gebring het, het almal steeds gewag.",
+      "en": "Although moving the deadline brought relief, everyone still waited.",
+      "unit": 2,
+      "category": "subordinate_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Because moving the deadline brought relief, everyone finished early.",
+        "Although moving the deadline caused stress, everyone still waited.",
+        "Although moving the deadline brought relief, nobody waited.",
+        "Although the deadline was not moved, everyone still waited."
+      ],
+      "wrongAf": [
+        "Hoewel die verskuiwing van die sperdatum verligting het gebring, het almal steeds gewag.",
+        "Hoewel die verskuiwing van die sperdatum verligting gebring het, almal het steeds gewag.",
+        "Hoewel die verskuiwing van die sperdatum verligting gebring het, het almal steeds wag.",
+        "Omdat die verskuiwing van die sperdatum verligting gebring het, was almal vroeg klaar."
+      ],
+      "note": "A nominalisation (die verskuiwing = the moving) as subject inside a 'hoewel' clause; verbs go last."
     }
   ]
 }

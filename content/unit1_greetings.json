@@ -401,120 +401,464 @@
       "note": "'Waarom' means the same."
     },
     {
-      "id": "p_hoe_gaan_dit",
-      "af": "Hoe gaan dit?",
-      "en": "How are you?",
+      "id": "p_aangesien_sy_die_nuwe_buurvrou",
+      "af": "Aangesien sy die buurvrou nie ken nie, stel sy haarself voor.",
+      "en": "Since she doesn't know the neighbour, she introduces herself.",
       "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1,
-      "exampleAf": "Hallo Piet, hoe gaan dit?",
-      "exampleEn": "Hi Piet, how are you?",
-      "note": "Literally 'How goes it?'"
-    },
-    {
-      "id": "p_dit_gaan_goed_dankie",
-      "af": "Dit gaan goed, dankie.",
-      "en": "I'm fine, thanks.",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1,
-      "altEn": [
-        "I'm well, thank you."
-      ]
-    },
-    {
-      "id": "p_baie_dankie",
-      "af": "Baie dankie.",
-      "en": "Thank you very much.",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1,
-      "altEn": [
-        "Thanks a lot."
-      ]
-    },
-    {
-      "id": "p_wat_is_jou_naam",
-      "af": "Wat is jou naam?",
-      "en": "What is your name?",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_my_naam_is_piet",
-      "af": "My naam is Piet.",
-      "en": "My name is Piet.",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_aangename_kennis",
-      "af": "Aangename kennis.",
-      "en": "Nice to meet you.",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2,
-      "altEn": [
-        "Pleased to meet you."
-      ]
-    },
-    {
-      "id": "p_mooi_loop",
-      "af": "Mooi loop!",
-      "en": "Go well!",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2,
-      "note": "A friendly goodbye; literally 'walk nicely'."
-    },
-    {
-      "id": "p_ek_verstaan_nie",
-      "af": "Ek verstaan nie.",
-      "en": "I don't understand.",
-      "unit": 1,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2,
-      "note": "One 'nie' only: it already ends the sentence."
-    },
-    {
-      "id": "p_ek_praat_nie_afrikaans_nie",
-      "af": "Ek praat nie Afrikaans nie.",
-      "en": "I don't speak Afrikaans.",
-      "unit": 1,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Double negative: nie ... nie."
+      "wrongEn": [
+        "Since she knows the neighbour well, she introduces herself.",
+        "Although she doesn't know the neighbour, she introduces herself.",
+        "Since the neighbour doesn't know her, she introduces herself.",
+        "Since she didn't know the neighbour, she ignored her."
+      ],
+      "wrongAf": [
+        "Aangesien sy die buurvrou nie ken nie, sy stel haarself voor.",
+        "Aangesien sy ken die buurvrou nie, stel sy haarself voor.",
+        "Aangesien sy die buurvrou nie ken, stel sy haarself voor.",
+        "Hoewel sy die buurvrou nie ken nie, stel sy haarself voor."
+      ],
+      "note": "After 'aangesien' (since) the verb goes last (nie ken nie); the main clause then starts with its verb: stel sy."
     },
     {
-      "id": "p_ek_het_jou_gemis",
-      "af": "Ek het jou gemis.",
-      "en": "I missed you.",
+      "id": "p_nadat_hulle_mekaar_hartlik",
+      "af": "Nadat hulle mekaar gegroet het, het die ou vriende ure lank gesels.",
+      "en": "After they had greeted each other, the old friends chatted for hours.",
       "unit": 1,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Past tense: het + ge- (mis → gemis)."
+      "wrongEn": [
+        "Before they greeted each other, the old friends chatted for hours.",
+        "After they had greeted each other, the old friends argued for hours.",
+        "After greeting each other, the old friends chatted for an hour.",
+        "After they had greeted each other, the new friends chatted for hours."
+      ],
+      "wrongAf": [
+        "Nadat hulle mekaar het gegroet, het die ou vriende ure lank gesels.",
+        "Nadat hulle mekaar gegroet het, die ou vriende het ure lank gesels.",
+        "Voordat hulle mekaar gegroet het, het die ou vriende ure lank gesels.",
+        "Nadat hulle mekaar gegroet het, het die ou vriende ure lank gegesels."
+      ],
+      "note": "'Nadat' (after) sends 'gegroet het' to the end. 'Gesels' already starts with ge-, so no extra ge-."
+    },
+    {
+      "id": "p_die_man_vir_wie_ek_gister_by_die",
+      "af": "Die man vir wie ek gister gewaai het, is die nuwe skoolhoof.",
+      "en": "The man I waved to yesterday is the new principal.",
+      "unit": 1,
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The man who waved to me yesterday is the new principal.",
+        "The man I waved to yesterday was the old principal.",
+        "The man I waved to today is the new principal.",
+        "The man I didn't wave to yesterday is the new principal."
+      ],
+      "wrongAf": [
+        "Die man vir wie ek gister het gewaai, is die nuwe skoolhoof.",
+        "Die man wat gister vir my gewaai het, is die nuwe skoolhoof.",
+        "Die man vir wie ek gister waai het, is die nuwe skoolhoof.",
+        "Die man vir wat ek gister gewaai het, is die nuwe skoolhoof."
+      ],
+      "note": "After a preposition, use 'wie' for a person: vir wie (to whom). The relative clause ends with its verb."
+    },
+    {
+      "id": "p_die_gaste_is_by_die_deur_deur",
+      "af": "Die gaste is deur die gasvrou self by die deur verwelkom.",
+      "en": "The guests were welcomed at the door by the hostess herself.",
+      "unit": 1,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The guests welcomed the hostess at the door.",
+        "The guests are being welcomed at the door by the hostess herself.",
+        "The guests were welcomed at the door by the hostess's husband.",
+        "The guests were turned away at the door by the hostess herself."
+      ],
+      "wrongAf": [
+        "Die gaste word deur die gasvrou self by die deur verwelkom.",
+        "Die gaste is deur die gasvrou self by die deur geverwelkom.",
+        "Die gaste het die gasvrou self by die deur verwelkom.",
+        "Die gaste het deur die gasvrou self by die deur verwelkom."
+      ],
+      "note": "Past passive: is + past participle (is verwelkom = were welcomed). 'Word' would make it present. Ver- verbs take no ge-."
+    },
+    {
+      "id": "p_die_toeris_het_gevra_of_iemand",
+      "af": "Die toeris het gevra of iemand hom die pad kon wys.",
+      "en": "The tourist asked whether someone could show him the way.",
+      "unit": 1,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The tourist asked whether he could show someone the way.",
+        "The tourist said that someone had shown him the way.",
+        "The tourist asked someone to drive him there.",
+        "The tourist asks whether someone can show him the way."
+      ],
+      "wrongAf": [
+        "Die toeris het gevra of kon iemand hom die pad wys.",
+        "Die toeris het gesê dat iemand hom die pad gewys het.",
+        "Die toeris het gevra of hy iemand die pad kon wys.",
+        "Die toeris vra of iemand hom die pad kan wys."
+      ],
+      "note": "A reported yes/no question uses 'of' (whether) and sends the verbs to the end: of iemand ... kon wys."
+    },
+    {
+      "id": "p_ma_het_gese_dat_ons_die_bure",
+      "af": "Ma het gesê dat die bure ons hond teruggebring het.",
+      "en": "Mom said that the neighbours had brought back our dog.",
+      "unit": 1,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Mom said that we had brought back the neighbours' dog.",
+        "Mom asked whether the neighbours had brought back our dog.",
+        "Mom said that the neighbours would bring back our dog.",
+        "Mom said that the neighbours had taken our dog away."
+      ],
+      "wrongAf": [
+        "Ma het gesê dat die bure het ons hond teruggebring.",
+        "Ma het gesê dat die bure ons hond geterugbring het.",
+        "Ma het gesê dat ons die bure se hond teruggebring het.",
+        "Ma het gevra of die bure ons hond teruggebring het."
+      ],
+      "note": "Reported speech with 'dat': the verbs go last. Separable terugbring puts ge- inside: teruggebring."
+    },
+    {
+      "id": "p_niemand_het_die_vreemdeling",
+      "af": "Niemand het die vreemdeling gegroet nie, hoewel hy vriendelik was.",
+      "en": "Nobody greeted the stranger, although he was friendly.",
+      "unit": 1,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Everybody greeted the stranger, because he was friendly.",
+        "Nobody greeted the stranger, because he was unfriendly.",
+        "The stranger greeted nobody, although they were friendly.",
+        "Somebody greeted the stranger, although he was unfriendly."
+      ],
+      "wrongAf": [
+        "Niemand het die vreemdeling gegroet, hoewel hy vriendelik was.",
+        "Niemand het nie die vreemdeling gegroet nie, hoewel hy vriendelik was.",
+        "Niemand het die vreemdeling gegroet nie, hoewel hy was vriendelik.",
+        "Die vreemdeling het niemand gegroet nie, hoewel hy vriendelik was."
+      ],
+      "note": "'Niemand' (nobody) still needs a closing 'nie', but no extra 'nie' after the verb. 'Hoewel' sends 'was' last."
+    },
+    {
+      "id": "p_hy_het_nooit_n_woord_van_dank",
+      "af": "Hy het nooit dankie gesê nie, selfs nie nadat ons gehelp het nie.",
+      "en": "He never said thank you, not even after we had helped.",
+      "unit": 1,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "He always said thank you, even after we had helped.",
+        "We never said thank you, not even after he had helped.",
+        "He never said thank you, not even before we helped.",
+        "He seldom said thank you, even after we had helped."
+      ],
+      "wrongAf": [
+        "Hy het nooit dankie gesê, selfs nie nadat ons gehelp het nie.",
+        "Hy het nooit dankie gesê nie, selfs nie nadat ons het gehelp nie.",
+        "Ons het nooit dankie gesê nie, selfs nie nadat hy gehelp het nie.",
+        "Hy het altyd dankie gesê, selfs nadat ons gehelp het."
+      ],
+      "note": "'Nooit ... nie' (never) closes with 'nie'; 'selfs nie ... nie' (not even) closes its own clause too."
+    },
+    {
+      "id": "p_gister_het_ek_my_ou_onderwyser",
+      "af": "Gister het ek my ou onderwyser raakgeloop en hom dadelik herken.",
+      "en": "Yesterday I bumped into my old teacher and recognised him at once.",
+      "unit": 1,
+      "category": "past_tense",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Yesterday my old teacher bumped into me and recognised me at once.",
+        "Yesterday I bumped into my old teacher but didn't recognise him.",
+        "Yesterday I phoned my old teacher and thanked him at once.",
+        "Today I bump into my old teacher and recognise him at once."
+      ],
+      "wrongAf": [
+        "Gister ek het my ou onderwyser raakgeloop en hom dadelik herken.",
+        "Gister het ek my ou onderwyser geraakloop en hom dadelik geherken.",
+        "Gister het ek my ou onderwyser raakloop en hom dadelik herken.",
+        "Gister het my ou onderwyser my raakgeloop en my dadelik herken."
+      ],
+      "note": "raakloop becomes raakgeloop (ge- in the middle); herken keeps its form because her- verbs take no ge-."
+    },
+    {
+      "id": "p_toe_hy_die_nuwe_kollega_ontmoet",
+      "af": "Toe hy haar ontmoet, het hy met die deur in die huis geval.",
+      "en": "When he met her, he came straight to the point.",
+      "unit": 1,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "When he met her, he fell through the door into the house.",
+        "When he met her, he beat about the bush.",
+        "When she met him, she came straight to the point.",
+        "When he met her, he left without saying a word."
+      ],
+      "wrongAf": [
+        "Toe hy haar ontmoet, hy het met die deur in die huis geval.",
+        "Toe hy haar ontmoet, het hy met die huis in die deur geval.",
+        "Toe hy haar ontmoet, het hy om die warm pap gedraai.",
+        "Toe hy haar ontmoet, het hy met die deur in die huis val."
+      ],
+      "note": "'Met die deur in die huis val' = to come straight to the point (literally: fall into the house with the door)."
+    },
+    {
+      "id": "p_haar_vriendelike_woorde_was_soos",
+      "af": "Haar woorde was soos 'n koel briesie, en almal het ontspan.",
+      "en": "Her words were like a cool breeze, and everyone relaxed.",
+      "unit": 1,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Her words were like a cold wind, and everyone tensed up.",
+        "A cool breeze blew while she spoke, and everyone relaxed.",
+        "Her words were like a cool breeze, but nobody relaxed.",
+        "Her words were like a hot wind, and everyone relaxed."
+      ],
+      "wrongAf": [
+        "Haar woorde was soos 'n koel briesie, en almal het geontspan.",
+        "Haar woorde was soos 'n koel briesie, en almal ontspan het.",
+        "Haar woorde was soos 'n koue wind, en almal het verstyf.",
+        "Haar woorde was soos 'n koel briesie, maar niemand het ontspan nie."
+      ],
+      "note": "A simile (vergelyking) compares with 'soos' (like). Ontspan starts with ont-, so its past form has no ge-."
+    },
+    {
+      "id": "p_ondanks_die_stortreen_het_die_ou",
+      "af": "Ondanks die stortreën het die wag elke kind by die hek gegroet.",
+      "en": "Despite the downpour, the guard greeted every child at the gate.",
+      "unit": 1,
+      "category": "inversion",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Because of the downpour, the guard greeted every child at the gate.",
+        "Despite the downpour, every child greeted the guard at the gate.",
+        "Despite the downpour, the guard didn't greet a single child.",
+        "Despite the downpour, the guard greets every child at the gate."
+      ],
+      "wrongAf": [
+        "Ondanks die stortreën die wag het elke kind by die hek gegroet.",
+        "Ondanks die stortreën het die wag elke kind by die hek groet.",
+        "Weens die stortreën het die wag elke kind by die hek gegroet.",
+        "Ondanks die stortreën het elke kind die wag by die hek gegroet."
+      ],
+      "note": "When a phrase like 'ondanks die stortreën' comes first, the verb stays second: het die wag."
+    },
+    {
+      "id": "p_as_ek_geweet_het_dat_die_gaste",
+      "af": "As ek geweet het dat die gaste so vroeg sou opdaag, sou ek hulle ingewag het.",
+      "en": "Had I known the guests would arrive so early, I would have waited for them.",
+      "unit": 1,
+      "category": "modal",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Because I knew the guests would arrive so early, I waited for them.",
+        "Had I known the guests would arrive so late, I would have waited for them.",
+        "Had I known the guests would arrive so early, I would not have waited.",
+        "Had the guests known I would arrive so early, they would have waited for me."
+      ],
+      "wrongAf": [
+        "As ek geweet het dat die gaste so vroeg sou opdaag, ek sou hulle ingewag het.",
+        "As ek geweet het dat die gaste so vroeg sou opdaag, sou ek hulle inwag het.",
+        "As ek geweet het dat die gaste sou so vroeg opdaag, sou ek hulle ingewag het.",
+        "Omdat ek geweet het dat die gaste so vroeg sou opdaag, het ek hulle ingewag."
+      ],
+      "note": "Unreal past: as ... het, sou ... het (if I had ..., I would have ...). Separable inwag becomes ingewag."
+    },
+    {
+      "id": "p_die_besoekende_ministers_is_met",
+      "af": "Die ministers is plegtig ontvang, waarna hulle deur die burgemeester voorgestel is.",
+      "en": "The ministers were formally received, after which the mayor introduced them.",
+      "unit": 1,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The ministers formally received the mayor, after which they introduced him.",
+        "The ministers were formally received, after which they introduced the mayor.",
+        "The ministers are being received, after which the mayor will introduce them.",
+        "The ministers were received without ceremony, before the mayor introduced them."
+      ],
+      "wrongAf": [
+        "Die ministers het plegtig ontvang, waarna hulle deur die burgemeester voorgestel het.",
+        "Die ministers is plegtig geontvang, waarna hulle deur die burgemeester voorgestel is.",
+        "Die ministers is plegtig ontvang, waarna hulle is deur die burgemeester voorgestel.",
+        "Die ministers word plegtig ontvang, waarna hulle deur die burgemeester voorgestel word."
+      ],
+      "note": "Two past passives (is ontvang, voorgestel is). 'Waarna' (after which) sends 'is' to the end. Ont- verbs take no ge-."
+    },
+    {
+      "id": "p_die_voorsitter_het_die_gehoor",
+      "af": "Die voorsitter het meegedeel dat nuwe lede voortaan deur 'n komitee verwelkom sou word.",
+      "en": "The chair announced that new members would henceforth be welcomed by a committee.",
+      "unit": 1,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The chair asked whether new members could henceforth be welcomed by a committee.",
+        "The chair announced that a committee would no longer welcome new members.",
+        "The chair announced that new members had always been welcomed by a committee.",
+        "A committee announced that new members would henceforth be welcomed by the chair."
+      ],
+      "wrongAf": [
+        "Die voorsitter het meegedeel dat nuwe lede sou voortaan deur 'n komitee verwelkom word.",
+        "Die voorsitter het gemeedeel dat nuwe lede voortaan deur 'n komitee verwelkom sou word.",
+        "Die voorsitter het gevra of nuwe lede voortaan deur 'n komitee verwelkom kon word.",
+        "'n Komitee het meegedeel dat nuwe lede voortaan deur die voorsitter verwelkom sou word."
+      ],
+      "note": "Formal reported speech with a future passive in the past: verwelkom sou word (would be welcomed). Meedeel: meegedeel."
+    },
+    {
+      "id": "p_die_hoflikheid_waarmee_die_ou",
+      "af": "Die hoflikheid waarmee hy vreemdelinge bejeën, is iets waaruit ons kan leer.",
+      "en": "The courtesy with which he treats strangers is something we can learn from.",
+      "unit": 1,
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The courtesy with which strangers treat him is something we can learn from.",
+        "The rudeness with which he treats strangers is something we can learn from.",
+        "The courtesy with which he treated strangers is something we never learnt.",
+        "He treats strangers courteously because he learnt it from us."
+      ],
+      "wrongAf": [
+        "Die hoflikheid waarmee hy bejeën vreemdelinge, is iets waaruit ons kan leer.",
+        "Die hoflikheid waarmee hy vreemdelinge bejeën, is iets waaruit ons leer kan.",
+        "Die hoflikheid waarvan hy vreemdelinge bejeën, is iets waaruit ons kan leer.",
+        "Die hoflikheid waarmee vreemdelinge hom bejeën, is iets waaruit ons kan leer."
+      ],
+      "note": "Two relative clauses with waar- words: waarmee (with which), waaruit (from which). Verbs go last in both."
+    },
+    {
+      "id": "p_toe_die_vreemdeling_haar",
+      "af": "Toe die vreemdeling haar aanspreek, het sy met die mond vol tande gestaan.",
+      "en": "When the stranger addressed her, she was lost for words.",
+      "unit": 1,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "When the stranger addressed her, she stood with a mouth full of teeth.",
+        "When the stranger addressed her, she answered at once.",
+        "When she addressed the stranger, he was lost for words.",
+        "When the stranger addressed her, she laughed at him."
+      ],
+      "wrongAf": [
+        "Toe die vreemdeling haar aanspreek, sy het met die mond vol tande gestaan.",
+        "Toe die vreemdeling haar aanspreek, het sy met die mond vol tande staan.",
+        "Toe die vreemdeling haar aanspreek, het sy dadelik geantwoord.",
+        "Toe sy die vreemdeling aanspreek, het hy met die mond vol tande gestaan."
+      ],
+      "note": "'Met die mond vol tande staan' = to be lost for words (literally: stand with a mouth full of teeth)."
+    },
+    {
+      "id": "p_haar_beleefde_glimlag_was_n",
+      "af": "Haar glimlag was 'n masker waaragter sy haar teleurstelling probeer verberg het.",
+      "en": "Her smile was a mask behind which she tried to hide her disappointment.",
+      "unit": 1,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "She wore a smiling mask to hide her disappointment.",
+        "Her smile was a mask behind which she tried to hide her delight.",
+        "Her smile showed openly how disappointed she was.",
+        "Her smile was a mask behind which she hid her anger."
+      ],
+      "wrongAf": [
+        "Haar glimlag was 'n masker waaragter sy haar teleurstelling geprobeer verberg het.",
+        "Haar glimlag was 'n masker waaragter sy probeer haar teleurstelling verberg het.",
+        "Sy het 'n masker met 'n glimlag gedra om haar teleurstelling te verberg.",
+        "Haar glimlag was 'n masker waaragter sy haar vreugde probeer verberg het."
+      ],
+      "note": "A metaphor (metafoor) says the smile IS a mask, with no 'soos'. Probeer + another verb takes no ge-: probeer verberg het."
+    },
+    {
+      "id": "p_geen_hoflikheid_kon_die_spanning",
+      "af": "Geen hoflikheid kon die spanning verlig nie, en niemand wou die eerste stap doen nie.",
+      "en": "No courtesy could ease the tension, and nobody wanted to take the first step.",
+      "unit": 1,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Courtesy eased the tension, and everybody wanted to take the first step.",
+        "No courtesy could ease the tension, but somebody took the first step.",
+        "They showed no courtesy, so nobody wanted to take the first step.",
+        "No courtesy will ever ease the tension, because nobody takes the first step."
+      ],
+      "wrongAf": [
+        "Geen hoflikheid kon die spanning verlig, en niemand wou die eerste stap doen nie.",
+        "Geen hoflikheid kon die spanning verlig nie, en niemand wou nie die eerste stap doen nie.",
+        "Geen hoflikheid kon die spanning verlig nie, en niemand wou die eerste stap gedoen nie.",
+        "Hoflikheid kon die spanning verlig, en almal wou die eerste stap doen."
+      ],
+      "note": "Each negative clause (geen ..., niemand ...) closes with its own 'nie'. 'Die eerste stap doen' = take the first step."
+    },
+    {
+      "id": "p_omdat_die_korrekte_aanspreekvorm",
+      "af": "Omdat etiket hoog geag word, het die skool 'n werkswinkel vir matrieks gereël.",
+      "en": "Because etiquette is highly valued, the school arranged a workshop for matrics.",
+      "unit": 1,
+      "category": "subordinate_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Although etiquette is highly valued, the school cancelled the matric workshop.",
+        "Because etiquette is seldom valued, the school arranged a workshop for matrics.",
+        "Because the matrics arranged a workshop, etiquette is now highly valued.",
+        "Because etiquette is highly valued, the school will arrange a matric workshop."
+      ],
+      "wrongAf": [
+        "Omdat etiket hoog word geag, het die skool 'n werkswinkel vir matrieks gereël.",
+        "Omdat etiket hoog geag word, die skool het 'n werkswinkel vir matrieks gereël.",
+        "Omdat etiket hoog geag word, het die skool 'n werkswinkel vir matrieks gegereël.",
+        "Hoewel etiket hoog geag word, het die skool die werkswinkel vir matrieks afgestel."
+      ],
+      "note": "A passive inside an 'omdat' clause ends 'geag word'; the main clause then inverts: het die skool."
     }
   ]
 }

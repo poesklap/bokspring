@@ -295,78 +295,464 @@
       "exampleEn": "Look, a rainbow!"
     },
     {
-      "id": "p_ek_hou_van_rooi",
-      "af": "Ek hou van rooi.",
-      "en": "I like red.",
+      "id": "p_hoewel_die_skildery_net_uit_grys",
+      "af": "Hoewel die skildery net grys is, is dit vir my die mooiste.",
+      "en": "Although the painting is only grey, it's my favourite.",
       "unit": 3,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1,
-      "note": "'Hou van' = like."
-    },
-    {
-      "id": "p_van_watter_kleur_hou_jy",
-      "af": "Van watter kleur hou jy?",
-      "en": "Which colour do you like?",
-      "unit": 3,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 2
-    },
-    {
-      "id": "p_die_lug_is_blou",
-      "af": "Die lug is blou.",
-      "en": "The sky is blue.",
-      "unit": 3,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_die_gras_is_groen",
-      "af": "Die gras is groen.",
-      "en": "The grass is green.",
-      "unit": 3,
-      "category": "phrase",
-      "partOfSpeech": "phrase",
-      "kind": "phrase",
-      "tier": 1
-    },
-    {
-      "id": "p_ek_hou_nie_van_pienk_nie",
-      "af": "Ek hou nie van pienk nie.",
-      "en": "I don't like pink.",
-      "unit": 3,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Double negative: nie ... nie."
+      "wrongEn": [
+        "Because the painting is only grey, I like it least.",
+        "Although the painting is only white, it's my favourite.",
+        "Although the painting has no grey in it, it's my favourite.",
+        "Although the painting is only grey, it's not my favourite."
+      ],
+      "wrongAf": [
+        "Hoewel die skildery is net grys, is dit vir my die mooiste.",
+        "Hoewel die skildery net grys is, dit is vir my die mooiste.",
+        "Omdat die skildery net grys is, is dit vir my die lelikste.",
+        "Hoewel die skildery net wit is, is dit vir my die mooiste."
+      ],
+      "note": "'Hoewel' (although) sends 'is' to the end; the main clause then inverts: is dit."
     },
     {
-      "id": "p_sy_het_n_rooi_rokkie",
-      "af": "Sy het 'n rooi rokkie.",
-      "en": "She has a little red dress.",
+      "id": "p_terwyl_die_son_agter_die_berge",
+      "af": "Terwyl die son agter die berge verdwyn, word die lug pers.",
+      "en": "While the sun disappears behind the mountains, the sky turns purple.",
       "unit": 3,
-      "category": "phrase",
+      "category": "subordinate_clause",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 3,
-      "note": "Diminutive: rok → rokkie."
+      "wrongEn": [
+        "While the sun rises above the mountains, the sky turns purple.",
+        "While the sun disappears behind the mountains, the sky turns orange.",
+        "While the sun disappears behind the mountains, the sky stays blue.",
+        "Before the sun disappears behind the mountains, the sky turns pink."
+      ],
+      "wrongAf": [
+        "Terwyl verdwyn die son agter die berge, word die lug pers.",
+        "Terwyl die son agter die berge verdwyn, die lug word pers.",
+        "Terwyl die son agter die berge verdwyn, word die lug oranje.",
+        "Terwyl die son agter die berge opkom, word die lug pers."
+      ],
+      "note": "'Terwyl' (while) sends 'verdwyn' to the end; the next clause starts with its verb: word die lug."
     },
     {
-      "id": "p_die_son_het_helder_geskyn",
-      "af": "Die son het helder geskyn.",
-      "en": "The sun shone brightly.",
+      "id": "p_die_kunstenaar_wie_se_skilderye",
+      "af": "Die kunstenaar wie se skilderye so helder is, woon in Stellenbosch.",
+      "en": "The artist whose paintings are so bright lives in Stellenbosch.",
       "unit": 3,
-      "category": "phrase",
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The artist whose paintings are so dull lives in Stellenbosch.",
+        "The artist whose paintings are so bright works in Stellenbosch.",
+        "The artist whose paintings are so bright lived in Stellenbosch.",
+        "The artist who lives in Stellenbosch paints in dull colours."
+      ],
+      "wrongAf": [
+        "Die kunstenaar wat se skilderye so helder is, woon in Stellenbosch.",
+        "Die kunstenaar wie se skilderye is so helder, woon in Stellenbosch.",
+        "Die kunstenaar wie se skilderye so helder is, werk in Stellenbosch.",
+        "Die kunstenaar wie se skilderye so helder is, woon in die Paarl."
+      ],
+      "note": "'Wie se' = whose (for people). Not 'wat se'. The relative clause ends with its verb: is."
+    },
+    {
+      "id": "p_die_muurskildery_by_die_stasie",
+      "af": "Die muurskildery is deur leerders van drie skole ontwerp en geverf.",
+      "en": "The mural was designed and painted by learners from three schools.",
+      "unit": 3,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The mural is being painted by learners from three schools.",
+        "The mural was designed and painted for learners from three schools.",
+        "The mural was designed and painted by learners from two schools.",
+        "Learners from three schools were painted in the mural."
+      ],
+      "wrongAf": [
+        "Die muurskildery word deur leerders van drie skole ontwerp en geverf.",
+        "Die muurskildery het deur leerders van drie skole ontwerp en geverf.",
+        "Die muurskildery is deur leerders van drie skole geontwerp en geverf.",
+        "Die muurskildery is vir leerders van drie skole ontwerp en geverf."
+      ],
+      "note": "Past passive with 'is' and 'deur' (by). Ontwerp starts with ont-, so it has no ge-; verf becomes geverf."
+    },
+    {
+      "id": "p_die_kunsonderwyseres_het",
+      "af": "Juffrou het verduidelik dat ons groen kry as ons geel en blou meng.",
+      "en": "The teacher explained that we get green if we mix yellow and blue.",
+      "unit": 3,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The teacher explained that we get yellow if we mix green and blue.",
+        "The teacher asked whether we get green if we mix yellow and blue.",
+        "The teacher explained that yellow and blue don't make green.",
+        "The teacher explained that we get purple if we mix red and blue."
+      ],
+      "wrongAf": [
+        "Juffrou het verduidelik dat ons kry groen as ons geel en blou meng.",
+        "Juffrou het verduidelik dat ons groen kry as ons meng geel en blou.",
+        "Juffrou het gevra of ons groen kry as ons geel en blou meng.",
+        "Juffrou het verduidelik dat ons geel kry as ons groen en blou meng."
+      ],
+      "note": "A general truth stays in the present in reported speech. Both 'dat' and 'as' (if) send the verb last: groen kry, blou meng."
+    },
+    {
+      "id": "p_nie_een_van_die_kinders_het_al",
+      "af": "Nie een van die kinders het al ooit 'n wit renoster gesien nie.",
+      "en": "Not one of the children has ever seen a white rhino.",
+      "unit": 3,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Every one of the children has seen a white rhino.",
+        "One of the children has never seen a white rhino.",
+        "None of the children has ever seen a black rhino.",
+        "Not one of the children will ever see a white rhino."
+      ],
+      "wrongAf": [
+        "Nie een van die kinders het al ooit 'n wit renoster gesien.",
+        "Nie een van die kinders het al ooit 'n wit renoster sien nie.",
+        "Een van die kinders het nog nooit 'n wit renoster gesien nie.",
+        "Nie een van die kinders sal ooit 'n wit renoster sien nie."
+      ],
+      "note": "'Nie een ... nie' = not one. The first 'nie' starts the subject, the second closes the sentence."
+    },
+    {
+      "id": "p_vir_die_matriekafskeid_het_sy",
+      "af": "Sy het haar hare rooi gekleur en 'n groen rok by Ouma geleen.",
+      "en": "She dyed her hair red and borrowed a green dress from Gran.",
+      "unit": 3,
+      "category": "past_tense",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "She dyed her hair red and lent a green dress to Gran.",
+        "She dyed her hair green and borrowed a red dress from Gran.",
+        "She will dye her hair red and borrow a green dress from Gran.",
+        "She cut her hair short and borrowed a green dress from Gran."
+      ],
+      "wrongAf": [
+        "Sy het haar hare rooi gekleur en 'n groen rok aan Ouma geleen.",
+        "Sy het haar hare rooi kleur en 'n groen rok by Ouma leen.",
+        "Sy het haar hare groen gekleur en 'n rooi rok by Ouma geleen.",
+        "Sy gaan haar hare rooi kleur en 'n groen rok by Ouma leen."
+      ],
+      "note": "One 'het' serves two past verbs: gekleur en geleen. 'By iemand leen' = borrow; 'aan iemand leen' = lend."
+    },
+    {
+      "id": "p_besoekers_mag_nie_aan_die",
+      "af": "Jy mag nie aan die doek raak nie, aangesien vingers dit kan beskadig.",
+      "en": "You may not touch the canvas, since fingers can damage it.",
+      "unit": 3,
+      "category": "modal",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "You may touch the canvas, since fingers cannot damage it.",
+        "You may not touch the canvas, since it can damage fingers.",
+        "You could not touch the canvas, since fingers had damaged it.",
+        "You may not touch the canvas, since fingers have damaged it."
+      ],
+      "wrongAf": [
+        "Jy mag nie aan die doek raak, aangesien vingers dit kan beskadig.",
+        "Jy mag nie aan die doek raak nie, aangesien vingers kan dit beskadig.",
+        "Jy mag aan die doek raak, aangesien vingers dit nie kan beskadig nie.",
+        "Jy mag nie aan die doek raak nie, aangesien vingers dit gebeskadig."
+      ],
+      "note": "'Mag nie' = may not (not allowed). After 'aangesien' the modal and verb go last: kan beskadig. Doek = canvas."
+    },
+    {
+      "id": "p_die_nuwe_kunsonderwyser_was_net",
+      "af": "Die nuwe onderwyser was net 'n blou Maandag by ons skool.",
+      "en": "The new teacher was at our school for only a very short time.",
+      "unit": 3,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "The new teacher was at our school only on a sad Monday.",
+        "The new teacher was at our school for many years.",
+        "The new teacher only came to our school on Mondays.",
+        "The new teacher wore blue every Monday at our school."
+      ],
+      "wrongAf": [
+        "Die nuwe onderwyser was jare lank by ons skool.",
+        "Die nuwe onderwyser was net op 'n Maandag by ons skool.",
+        "Die nuwe onderwyser was net 'n blou Dinsdag by ons skool.",
+        "Die nuwe onderwyser het net 'n blou Maandag by ons skool."
+      ],
+      "note": "'Net 'n blou Maandag' = only a very short time. It has nothing to do with the colour or the day."
+    },
+    {
+      "id": "p_die_herfsblare_het_soos_goue",
+      "af": "Die herfsblare het soos goue munte in die son geblink.",
+      "en": "The autumn leaves glittered in the sun like golden coins.",
+      "unit": 3,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Golden coins glittered in the sun among the autumn leaves.",
+        "The autumn leaves faded in the sun like old paper.",
+        "The spring leaves glittered in the rain like golden coins.",
+        "The autumn leaves glittered in the moonlight like golden coins."
+      ],
+      "wrongAf": [
+        "Die herfsblare het soos goue munte in die son blink.",
+        "Die herfsblare het soos goud munte in die son geblink.",
+        "Goue munte het tussen die herfsblare in die son geblink.",
+        "Die herfsblare het soos goue munte in die maanlig geblink."
+      ],
+      "note": "A simile with 'soos'. Before a noun, 'goud' becomes 'goue': goue munte (golden coins)."
+    },
+    {
+      "id": "p_die_see_was_n_woedende_grys",
+      "af": "Die see was 'n woedende grys monster wat die rotse bestorm het.",
+      "en": "The sea was a furious grey monster that attacked the rocks.",
+      "unit": 3,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "A furious grey monster came out of the sea and attacked the rocks.",
+        "The sea was a calm grey blanket that covered the rocks.",
+        "The rocks were a furious grey monster that attacked the sea.",
+        "The sea was a furious green monster that attacked the boats."
+      ],
+      "wrongAf": [
+        "Die see was 'n woedende grys monster wat die rotse het bestorm.",
+        "Die see was 'n woedende grys monster wat die rotse gebestorm het.",
+        "Die see was 'n woedende grys monster wat bestorm die rotse.",
+        "Die rotse was 'n woedende grys monster wat die see bestorm het."
+      ],
+      "note": "A metaphor: the sea IS a monster (no 'soos'). Be- verbs take no ge-: bestorm het."
+    },
+    {
+      "id": "p_eers_nadat_die_verf_heeltemal",
+      "af": "Eers nadat die verf droog was, het sy die skildery onderteken.",
+      "en": "Only after the paint was dry did she sign the painting.",
+      "unit": 3,
+      "category": "inversion",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "wrongEn": [
+        "Even before the paint was dry, she signed the painting.",
+        "Only after the paint was dry did she frame the painting.",
+        "Only after she had signed the painting did the paint dry.",
+        "Only after the paint is dry will she sign the painting."
+      ],
+      "wrongAf": [
+        "Eers nadat die verf droog was, sy het die skildery onderteken.",
+        "Eers nadat die verf was droog, het sy die skildery onderteken.",
+        "Eers nadat die verf droog was, het sy die skildery geonderteken.",
+        "Eers nadat die verf droog was, het sy die skildery verkoop."
+      ],
+      "note": "A whole clause placed first counts as one position, so the verb comes next: het sy. Onderteken takes no ge-."
+    },
+    {
+      "id": "p_as_die_galery_die_skildery",
+      "af": "As die galery die skildery verseker het, sou hulle nie met leë hande gestaan het nie.",
+      "en": "If the gallery had insured the painting, they would not have been left empty-handed.",
+      "unit": 3,
+      "category": "modal",
       "partOfSpeech": "phrase",
       "kind": "phrase",
       "tier": 4,
-      "note": "Past tense: het + ge- (skyn → geskyn)."
+      "wrongEn": [
+        "Because the gallery had insured the painting, they were not left empty-handed.",
+        "If the gallery had insured the painting, they would have been left empty-handed.",
+        "If the gallery insures the painting, they will not be left empty-handed.",
+        "If the gallery had sold the painting, they would not have been left empty-handed."
+      ],
+      "wrongAf": [
+        "As die galery die skildery verseker het, hulle sou nie met leë hande gestaan het nie.",
+        "As die galery die skildery geverseker het, sou hulle nie met leë hande gestaan het nie.",
+        "As die galery die skildery verseker het, sou hulle nie met leë hande gestaan het.",
+        "Omdat die galery die skildery verseker het, het hulle nie met leë hande gestaan nie."
+      ],
+      "note": "Unreal past: as ... het, sou ... het. 'Met leë hande staan' = to be left empty-handed. Ver- verbs take no ge-."
+    },
+    {
+      "id": "p_die_rotsskilderye_is_eers_in_die",
+      "af": "Die rotsskilderye is eers onlangs beskryf, hoewel dit eeue gelede in oker aangebring is.",
+      "en": "The rock art was only recently described, though it was made in ochre centuries ago.",
+      "unit": 3,
+      "category": "passive",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The rock art was only recently made, though it was described centuries ago.",
+        "The rock art is only now being described, though it was made in ochre centuries ago.",
+        "The rock art was only recently described, though it was made in ochre a year ago.",
+        "The rock art was only recently described, because it was made in ochre long ago."
+      ],
+      "wrongAf": [
+        "Die rotsskilderye het eers onlangs beskryf, hoewel dit eeue gelede in oker aangebring is.",
+        "Die rotsskilderye is eers onlangs gebeskryf, hoewel dit eeue gelede in oker aangebring is.",
+        "Die rotsskilderye is eers onlangs beskryf, hoewel dit is eeue gelede in oker aangebring.",
+        "Die rotsskilderye is eers onlangs aangebring, hoewel dit eeue gelede in oker beskryf is."
+      ],
+      "note": "Two past passives: is beskryf, and aangebring is (verb last after 'hoewel'). Be- verbs take no ge-; aanbring: aangebring."
+    },
+    {
+      "id": "p_die_kleurpalet_waarmee_die",
+      "af": "Die kleurpalet waarmee sy die Karoo vasvang, weerspieël 'n onbeskryflike eensaamheid.",
+      "en": "The palette with which she captures the Karoo reflects an indescribable loneliness.",
+      "unit": 3,
+      "category": "relative_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The palette with which the Karoo captures her reflects an indescribable loneliness.",
+        "The palette with which she captures the Karoo reflects an indescribable joy.",
+        "The palette with which she captures the Karoo hides an indescribable loneliness.",
+        "The palette she bought in the Karoo reflects an indescribable loneliness."
+      ],
+      "wrongAf": [
+        "Die kleurpalet waarmee sy vasvang die Karoo, weerspieël 'n onbeskryflike eensaamheid.",
+        "Die kleurpalet waarvan sy die Karoo vasvang, weerspieël 'n onbeskryflike eensaamheid.",
+        "Die kleurpalet waarmee sy die Karoo vasvang, weerspieël 'n onbeskryflike vreugde.",
+        "Die kleurpalet waarmee die Karoo haar vasvang, weerspieël 'n onbeskryflike eensaamheid."
+      ],
+      "note": "'Waarmee' (with which) opens the relative clause; its verb goes last (vasvang), then the main verb: weerspieël."
+    },
+    {
+      "id": "p_die_kurator_het_verduidelik_dat",
+      "af": "Die kurator het gesê dat die doek weens sonlig vervaag het en gerestoureer sou word.",
+      "en": "The curator said the canvas had faded because of sunlight and would be restored.",
+      "unit": 3,
+      "category": "indirect_speech",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The curator asked whether the canvas had faded and could be restored.",
+        "The curator said the canvas had not faded and had already been restored.",
+        "The curator said the canvas had faded because of damp and would be replaced.",
+        "The curator said sunlight had brightened the canvas and it would be restored."
+      ],
+      "wrongAf": [
+        "Die kurator het gesê dat die doek weens sonlig het vervaag en gerestoureer sou word.",
+        "Die kurator het gesê dat die doek weens sonlig vervaag het en restoureer sou word.",
+        "Die kurator het gevra of die doek weens sonlig vervaag het en gerestoureer kon word.",
+        "Die kurator het gesê dat die doek nie vervaag het nie en reeds gerestoureer is."
+      ],
+      "note": "Reported speech: one past verb (vervaag het) and a future passive in the past (gerestoureer sou word)."
+    },
+    {
+      "id": "p_die_resensent_het_geen_blad_voor",
+      "af": "Die resensent het geen blad voor die mond geneem nie: die uitstalling was smaakloos.",
+      "en": "The reviewer did not mince his words: the exhibition was tasteless.",
+      "unit": 3,
+      "category": "idiom",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "The reviewer did not hold a leaf before his mouth: the show was tasteless.",
+        "The reviewer chose his words carefully: the exhibition was tasteful.",
+        "The reviewer did not mince his words: the exhibition was superb.",
+        "The reviewer did not say a word: the exhibition was tasteless."
+      ],
+      "wrongAf": [
+        "Die resensent het geen blad voor die mond geneem: die uitstalling was smaakloos.",
+        "Die resensent het geen blad voor die mond neem nie: die uitstalling was smaakloos.",
+        "Die resensent het sy woorde versigtig gekies: die uitstalling was smaakvol.",
+        "Die resensent het geen woord gesê nie: die uitstalling was smaakloos."
+      ],
+      "note": "'Geen blad voor die mond neem nie' = not to mince one's words. 'Geen ... nie' closes with 'nie'."
+    },
+    {
+      "id": "p_die_herfs_het_die_wingerde_met",
+      "af": "Die herfs het die wingerde goud geverf, asof die natuur 'n meesterstuk wou voltooi.",
+      "en": "Autumn painted the vineyards gold, as if nature wanted to finish a masterpiece.",
+      "unit": 3,
+      "category": "figurative",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Autumn painted the vineyards gold, because nature had finished a masterpiece.",
+        "Someone painted the vineyards gold to finish a masterpiece.",
+        "Winter painted the vineyards white, as if nature wanted to finish a masterpiece.",
+        "Autumn stripped the vineyards bare, as if nature wanted to destroy a masterpiece."
+      ],
+      "wrongAf": [
+        "Die herfs het die wingerde goud geverf, asof die natuur wou 'n meesterstuk voltooi.",
+        "Die herfs het die wingerde goud geverf, asof die natuur 'n meesterstuk wou gevoltooi.",
+        "Die herfs het die wingerde goud verf, asof die natuur 'n meesterstuk wou voltooi.",
+        "Die herfs het die wingerde goud geverf, omdat die natuur 'n meesterstuk voltooi het."
+      ],
+      "note": "Personification: autumn paints and nature is an artist. 'Asof' (as if) sends 'wou voltooi' to the end."
+    },
+    {
+      "id": "p_nerens_in_die_land_sal_jy_n",
+      "af": "Nêrens in die land sal jy blomme sien wat met Namakwaland s'n vergelyk kan word nie.",
+      "en": "Nowhere in the country will you see flowers that compare with Namaqualand's.",
+      "unit": 3,
+      "category": "negation",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "Everywhere in the country you will see flowers that compare with Namaqualand's.",
+        "Nowhere in Namaqualand will you see flowers that compare with the rest of the country's.",
+        "Nowhere in the country did you see flowers that compared with Namaqualand's.",
+        "Somewhere in the country you will see flowers that beat Namaqualand's."
+      ],
+      "wrongAf": [
+        "Nêrens in die land jy sal blomme sien wat met Namakwaland s'n vergelyk kan word nie.",
+        "Nêrens in die land sal jy blomme sien wat kan met Namakwaland s'n vergelyk word nie.",
+        "Nêrens in die land sal jy blomme sien wat met Namakwaland s'n vergelyk kan word.",
+        "Oral in die land sal jy blomme sien wat met Namakwaland s'n vergelyk kan word."
+      ],
+      "note": "'Nêrens' placed first causes inversion (sal jy). The relative clause ends 'vergelyk kan word', then 'nie'."
+    },
+    {
+      "id": "p_nadat_die_span_die_vergeelde",
+      "af": "Nadat die vergeelde vernis verwyder is, het die oorspronklike kleure na vore gekom.",
+      "en": "After the yellowed varnish had been removed, the original colours emerged.",
+      "unit": 3,
+      "category": "subordinate_clause",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "wrongEn": [
+        "After the yellow varnish had been applied, the original colours were lost.",
+        "Before the yellowed varnish was removed, the original colours emerged.",
+        "After the yellowed varnish had been removed, the colours looked dull.",
+        "Once the yellowed varnish is removed, the original colours will emerge."
+      ],
+      "wrongAf": [
+        "Nadat die vergeelde vernis is verwyder, het die oorspronklike kleure na vore gekom.",
+        "Nadat die vergeelde vernis verwyder is, die oorspronklike kleure het na vore gekom.",
+        "Nadat die vergeelde vernis geverwyder is, het die oorspronklike kleure na vore gekom.",
+        "Voordat die vergeelde vernis verwyder is, het die oorspronklike kleure na vore gekom."
+      ],
+      "note": "A passive 'nadat' clause first (verwyder is), then the main clause inverts: het die kleure. 'Na vore kom' = emerge."
     }
   ]
 }
