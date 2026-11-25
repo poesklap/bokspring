@@ -134,6 +134,8 @@ func on_challenge(c: Dictionary) -> void:
 	shown_ms = Time.get_ticks_msec()
 	changed_ms = 0
 	prompt_label.text = str(c.prompt)
+	var plen := str(c.prompt).length()
+	prompt_label.add_theme_font_size_override("font_size", 48 if plen <= 18 else (36 if plen <= 45 else (28 if plen <= 90 else 24)))
 	prompt_hint.text = "Tap the English" if c.type == "translate_af_en" else "Tap the Afrikaans"
 	_pop(prompt_label)
 	_fill_chips(c.options)
@@ -882,7 +884,8 @@ func _fill_chips(options: Array) -> void:
 		row.add_child(_lane_marker(i, options.size()))
 		var l := Label.new()
 		l.text = str(options[i])
-		l.add_theme_font_size_override("font_size", 27)
+		var olen := str(options[i]).length()
+		l.add_theme_font_size_override("font_size", 27 if olen <= 30 else (22 if olen <= 70 else 19))
 		l.add_theme_color_override("font_color", Style.TEXT)
 		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		l.size_flags_horizontal = Control.SIZE_EXPAND_FILL

@@ -1,5 +1,6 @@
 extends Control
-## Skippable adaptive placement test (~12 questions, about 2 minutes).
+## Skippable adaptive placement test: starts with the hardest sentences and
+## falls back level by level (see src/engine/placement.gd).
 ## Skipping sets Elementary: the learner has studied Afrikaans before.
 
 const U = preload("res://src/ui/ui_util.gd")
@@ -30,7 +31,7 @@ func _intro() -> void:
 	var hero := U.icon("res://assets/springbok/hero.svg", 220)
 	hero.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	box.add_child(hero)
-	U.label(box, "Let's see how much Afrikaans comes back to you. About 12 quick questions, 2 minutes. It sets your starting level; you can change it any time in settings.", "", true)
+	U.label(box, "Let's see how much Afrikaans comes back to you. We start with hard sentences and make them easier until we find your level. Up to 2 minutes; you can change the level any time in settings.", "", true)
 	U.spacer(box)
 	U.button(box, "Begin  (start)", _begin)
 	U.button(box, "Skip: start at Elementary", func(): _finish(Difficulty.ELEMENTARY), "GhostButton")
@@ -39,7 +40,7 @@ func _intro() -> void:
 func _begin() -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.randomize()
-	test = Placement.new(Game.content.placement, rng)
+	test = Placement.new(Placement.build_bank(Game.content.placement, Game.content.items), rng)
 	_next()
 
 
@@ -49,20 +50,21 @@ func _next() -> void:
 		_result()
 		return
 	_reset()
-	var bar := ProgressBar.new()
-	bar.max_value = Placement.LENGTH
-	bar.value = test.asked
-	bar.show_percentage = false
-	bar.custom_minimum_size = Vector2(0, 16)
-	box.add_child(bar)
+	var level_names := {4: "Grade 11–12 sentences", 3: "Grade 8–9 sentences", 2: "Everyday Afrikaans", 1: "The basics"}
+	U.label(box, "Question %d  ·  %s" % [test.asked + 1, level_names[int(q.tier)]], "MutedLabel", true)
 	U.label(box, "What does this mean?", "MutedLabel", true)
-	var p := U.label(box, str(q.prompt), "TitleLabel", true)
+	var p := U.label(box, str(q.prompt), "TitleLabel" if str(q.prompt).length() <= 30 else "", true)
+	if str(q.prompt).length() > 30:
+		p.add_theme_font_size_override("font_size", 30 if str(q.prompt).length() <= 90 else 26)
 	p.custom_minimum_size = Vector2(0, 140)
 	p.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	Game.speak(str(q.promptAudio))
 	for i in q.options.size():
 		var idx: int = i
-		U.button(box, str(q.options[i]), func(): _answer(idx), "SecondaryButton")
+		var b := U.button(box, str(q.options[i]), func(): _answer(idx), "SecondaryButton")
+		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		if str(q.options[i]).length() > 30:
+			b.add_theme_font_size_override("font_size", 22)
 	U.spacer(box)
 	U.button(box, "I don't know", func(): _answer(-1), "GhostButton")
 	U.button(box, "Skip the test", func(): _finish(Difficulty.ELEMENTARY), "GhostButton")
@@ -84,8 +86,8 @@ func _result() -> void:
 	var blurb := {
 		"beginner": "We'll start with the basics at a gentle pace.",
 		"elementary": "Around Grade 7–9 level, at a steady pace.",
-		"intermediate": "Around Grade 10–11: faster, trickier wrong answers.",
-		"advanced": "Matric level: quick pace and close look-alikes.",
+		"intermediate": "Grade 8–9 Home Language sentences from the start, with harder ones as you master them.",
+		"advanced": "Grade 11–12 Home Language sentences, quick pace and close look-alikes.",
 	}
 	U.label(box, blurb[level], "MutedLabel", true)
 	U.spacer(box)

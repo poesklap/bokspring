@@ -77,10 +77,19 @@ func next_unlock() -> Dictionary:
 	return {}
 
 
+## Hardest sentence tier that may be introduced now. Advanced (matric) learners
+## get everything; others unlock tier 4 once tier 3 sentences are known.
+func max_sentence_tier() -> int:
+	if str(progress.difficulty) == Difficulty.ADVANCED:
+		return 4
+	return Scheduler.max_new_tier(items_in_order, progress.cards)
+
+
 func start_round(size: int = 10) -> void:
 	Progress.roll_day(progress, today)
 	var ids := Scheduler.select(items_in_order, progress.cards, unlocked_units(),
-		int(profile().startUnit), today, int(progress.daily.newCount), size)
+		int(profile().startUnit), today, int(progress.daily.newCount), size,
+		max_sentence_tier(), bool(profile().get("sentencesEarly", false)))
 	session = RoundSession.new(ids)
 	_round_xp = 0
 	_current = {}

@@ -24,12 +24,12 @@ const PROFILES := {
 	},
 	INTERMEDIATE: {
 		"label": "Intermediate", "startUnit": 2, "maxUnlockedUnit": 3,
-		"speed": 1.15, "lanes": 5, "similarity": 0.75,
+		"speed": 1.15, "lanes": 5, "similarity": 0.75, "sentencesEarly": true,
 		"reverseFromBox": 2, "reverseChance": 0.5,
 	},
 	ADVANCED: {
 		"label": "Advanced", "startUnit": 3, "maxUnlockedUnit": 4,
-		"speed": 1.3, "lanes": 5, "similarity": 0.95,
+		"speed": 1.3, "lanes": 5, "similarity": 0.95, "sentencesEarly": true,
 		"reverseFromBox": 2, "reverseChance": 0.6,
 	},
 }

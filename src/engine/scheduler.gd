@@ -16,7 +16,8 @@ const SHARE_NEW := 0.2
 ## items_in_order: content items in teaching order (unit, then file order).
 ## Returns an Array of item ids, length n (may contain repeats if content is thin).
 static func select(items_in_order: Array, cards: Dictionary, unlocked_units: Array,
-		start_unit: int, today: int, new_used_today: int, n: int) -> Array:
+		start_unit: int, today: int, new_used_today: int, n: int, max_new_tier: int = 4,
+		sentences_early: bool = false) -> Array:
 	var unlocked := {}
 	for u in unlocked_units:
 		unlocked[int(u)] = true
@@ -30,7 +31,9 @@ static func select(items_in_order: Array, cards: Dictionary, unlocked_units: Arr
 		if not unlocked.has(int(item.unit)):
 			continue
 		if not cards.has(id):
-			fresh.append(item)
+			# Only sentences are held back by tier; words are always teachable.
+			if str(item.get("kind", "")) != "phrase" or int(item.get("tier", 1)) <= max_new_tier:
+				fresh.append(item)
 			continue
 		var c: Dictionary = cards[id]
 		if int(c.get("lastWrongDay", -1)) >= today - MISTAKE_DAYS and int(c.get("box", 1)) <= 2:
@@ -62,6 +65,17 @@ static func select(items_in_order: Array, cards: Dictionary, unlocked_units: Arr
 		if ka != kb:
 			return ka < kb
 		return int(a.get("tier", 1)) < int(b.get("tier", 1)))
+	# Learners placed at sentence level get new sentences alternating with new
+	# words from the start, instead of only after a unit's words.
+	if sentences_early:
+		var sents: Array = fresh.filter(func(it): return str(it.get("kind", "")) == "phrase")
+		var words: Array = fresh.filter(func(it): return str(it.get("kind", "")) != "phrase")
+		fresh = []
+		while not sents.is_empty() or not words.is_empty():
+			if not sents.is_empty():
+				fresh.append(sents.pop_front())
+			if not words.is_empty():
+				fresh.append(words.pop_front())
 	var new_ids: Array = []
 	var new_cap := maxi(0, DAILY_NEW_LIMIT - new_used_today)
 	for item in fresh:
@@ -87,6 +101,25 @@ static func select(items_in_order: Array, cards: Dictionary, unlocked_units: Arr
 		out.append(base[i % base.size()])
 		i += 1
 	return out
+
+
+## Sentences get harder as the learner progresses: tier 4 sentences are only
+## introduced once enough tier 3 sentences sit in box 3 or higher.
+const TIER4_AFTER_TIER3_KNOWN := 10
+
+
+static func max_new_tier(items_in_order: Array, cards: Dictionary) -> int:
+	var known := 0
+	var total := 0
+	for item in items_in_order:
+		if str(item.get("kind", "")) != "phrase" or int(item.get("tier", 1)) != 3:
+			continue
+		total += 1
+		if cards.has(item.id) and int(cards[item.id].get("box", 1)) >= 3:
+			known += 1
+	if total == 0 or known >= mini(TIER4_AFTER_TIER3_KNOWN, total):
+		return 4
+	return 3
 
 
 static func _unit_rank(unit: int, start_unit: int) -> int:

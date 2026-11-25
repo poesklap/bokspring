@@ -122,3 +122,47 @@ func test_combo_multiplier() -> void:
 	r.next_item(); r.record(false)
 	t.eq(r.combo, 0, "combo reset on mistake")
 	t.eq(r.best_combo, 5, "best combo kept")
+
+
+func _phrases(n: int, tier: int, prefix: String) -> Array:
+	var out: Array = []
+	for i in n:
+		out.append({"id": "p_%s_%02d" % [prefix, i], "unit": 1, "tier": tier, "kind": "phrase"})
+	return out
+
+
+func test_tier4_sentences_wait_until_tier3_known() -> void:
+	var t3 := _phrases(12, 3, "a")
+	var t4 := _phrases(8, 4, "b")
+	var items := t3 + t4
+	t.eq(Scheduler.max_new_tier(items, {}), 3, "nothing known yet: tier 3 only")
+	var ids := Scheduler.select(items, {}, [1], 1, 100, 0, 10, Scheduler.max_new_tier(items, {}))
+	for id in ids:
+		t.ok(id.begins_with("p_a_"), "no tier 4 yet: %s" % id)
+	var cards := {}
+	for i in 9:
+		cards[t3[i].id] = {"box": 3, "dueDay": 200, "lastWrongDay": -1}
+	t.eq(Scheduler.max_new_tier(items, cards), 3, "9 known: still 3")
+	cards[t3[9].id] = {"box": 4, "dueDay": 200, "lastWrongDay": -1}
+	t.eq(Scheduler.max_new_tier(items, cards), 4, "10 known: tier 4 opens")
+	var later := Scheduler.select(items, cards, [1], 1, 100, 0, 10, 4)
+	var has4 := false
+	for id in later:
+		if id.begins_with("p_b_"):
+			has4 = true
+	t.ok(has4, "tier 4 sentences now introduced")
+
+
+func test_tier_gate_never_blocks_words() -> void:
+	var words: Array = [{"id": "w_hard", "unit": 1, "tier": 4, "kind": "word"}]
+	var ids := Scheduler.select(words, {}, [1], 1, 100, 0, 1, 3)
+	t.eq(ids, ["w_hard"], "tier 4 word still taught")
+
+
+func test_sentence_level_learners_get_sentences_from_the_start() -> void:
+	var items := _items(10) + _phrases(5, 3, "s")
+	var normal := Scheduler.select(items, {}, [1], 1, 100, 0, 10, 4, false)
+	for id in normal:
+		t.ok(id.begins_with("w_"), "words first normally: %s" % id)
+	var early := Scheduler.select(items, {}, [1], 1, 100, 0, 10, 4, true)
+	t.ok(early.has("p_s_00") and early.has("w_1_00"), "sentences and words mixed: %s" % str(early))

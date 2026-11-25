@@ -132,44 +132,51 @@ func test_recalled_new_words_do_not_use_new_allowance() -> void:
 	t.ok(c2.isNew, "more new words offered after fast wins")
 
 
-func test_placement_strong_player_reaches_advanced() -> void:
-	var qs := _placement_bank()
+func _run_placement(knows_up_to: int, seed_value := 5) -> Placement:
 	var rng := RandomNumberGenerator.new()
-	rng.seed = 5
-	var pt := Placement.new(qs, rng)
-	var n := 0
-	while not pt.is_done():
+	rng.seed = seed_value
+	var pt := Placement.new(_placement_bank(), rng)
+	var guard := 0
+	while not pt.is_done() and guard < 40:
 		var q := pt.next_question()
 		if q.is_empty():
 			break
 		t.ok(q.options[q.correctIndex] == "right", "correct index tracks shuffle")
-		pt.answer(true)
-		n += 1
-	t.eq(n, 12, "12 questions")
+		pt.answer(int(q.tier) <= knows_up_to)
+		guard += 1
+	return pt
+
+
+func test_placement_starts_with_the_hardest_tier() -> void:
+	var rng := RandomNumberGenerator.new()
+	var pt := Placement.new(_placement_bank(), rng)
+	t.eq(int(pt.next_question().tier), 4, "first question is tier 4")
+
+
+func test_placement_strong_player_placed_fast_at_advanced() -> void:
+	var pt := _run_placement(4)
 	t.eq(pt.result_level(), "advanced", "all right -> advanced")
+	t.eq(pt.asked, 3, "three right answers settle it")
 
 
-func test_placement_weak_player_is_beginner() -> void:
-	var rng := RandomNumberGenerator.new()
-	rng.seed = 5
-	var pt := Placement.new(_placement_bank(), rng)
-	while not pt.is_done():
-		if pt.next_question().is_empty():
-			break
-		pt.answer(false)
-	t.eq(pt.result_level(), "beginner", "all wrong -> beginner")
+func test_placement_falls_back_tier_by_tier() -> void:
+	t.eq(_run_placement(3).result_level(), "intermediate", "knows tier 3")
+	t.eq(_run_placement(2).result_level(), "elementary", "knows tier 2")
+	t.eq(_run_placement(1).result_level(), "beginner", "knows tier 1")
+	var weak := _run_placement(0)
+	t.eq(weak.result_level(), "beginner", "knows nothing -> beginner")
+	t.ok(weak.asked <= Placement.LENGTH, "bounded length")
 
 
-func test_placement_middle_player() -> void:
-	var rng := RandomNumberGenerator.new()
-	rng.seed = 9
-	var pt := Placement.new(_placement_bank(), rng)
-	while not pt.is_done():
-		var q := pt.next_question()
-		if q.is_empty():
-			break
-		pt.answer(int(q.tier) <= 2)  # knows tiers 1-2 only
-	t.eq(pt.result_level(), "elementary", "knows basics -> elementary")
+func test_placement_bank_uses_sentences_for_upper_tiers() -> void:
+	var pq := [{"id": "q1", "tier": 1, "prompt": "hond", "options": ["dog", "a", "b", "c"], "correctIndex": 0},
+		{"id": "q4", "tier": 4, "prompt": "old", "options": ["x", "a", "b", "c"], "correctIndex": 0}]
+	var items := [{"id": "p_s", "kind": "phrase", "tier": 3, "af": "Hy het nie gekom nie.", "en": "He did not come.",
+		"wrongEn": ["He came.", "He is not coming.", "He will not come.", "She did not come."]}]
+	var bank := Placement.build_bank(pq, items)
+	t.eq(bank.size(), 2, "tier 1 question + one sentence (old tier 4 question dropped)")
+	t.eq(bank[1].prompt, "Hy het nie gekom nie.", "sentence prompt")
+	t.eq(bank[1].options[0], "He did not come.", "answer first before shuffle")
 
 
 func _placement_bank() -> Array:

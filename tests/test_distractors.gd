@@ -121,3 +121,18 @@ func test_shared_meaning_excluded_in_reverse_direction_too() -> void:
 	for dir in [D.AF_EN, D.EN_AF]:
 		var picked := D.pick(a, [a, b, c], 2, dir, 1.0, _rng())
 		t.ok(not picked.map(func(i): return i.id).has("w_ekskuus"), "ekskuus never a wrong answer for jammer (%s)" % dir)
+
+
+func test_sentences_use_hand_written_near_misses() -> void:
+	var s := _item("p_s", "Hy het nie gekom nie.", "He did not come.", "negation", "phrase", "phrase")
+	s["wrongEn"] = ["He came.", "He is not coming.", "He will not come.", "She did not come."]
+	s["wrongAf"] = ["Hy het gekom.", "Hy kom nie.", "Hy het nie gekom.", "Sy het nie gekom nie."]
+	var other := _item("p_o", "Ons eet.", "We eat.", "x", "phrase", "phrase")
+	for seed in 10:
+		var c := ChallengeGen.build(s, ChallengeGen.TYPE_AF_EN, [s, other], 5, 0.5, 1, 1.0, _rng(seed), "c")
+		t.eq(c.options.size(), 5, "5 options")
+		t.eq(c.options[c.correctIndex], "He did not come.", "correct")
+		t.ok(not c.options.has("We eat."), "near-misses fill the lanes first")
+		var r := ChallengeGen.build(s, ChallengeGen.TYPE_EN_AF, [s, other], 5, 0.5, 1, 1.0, _rng(seed), "c")
+		t.eq(r.options[r.correctIndex], "Hy het nie gekom nie.", "reverse correct")
+		t.ok(r.options.has("Hy het nie gekom."), "Afrikaans near-miss used")

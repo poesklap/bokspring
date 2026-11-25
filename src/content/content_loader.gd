@@ -8,7 +8,8 @@ const REQUIRED := ["id", "af", "en", "unit", "category", "partOfSpeech", "kind",
 const KINDS := ["word", "phrase"]
 const POS := ["noun", "verb", "adjective", "adverb", "interjection", "phrase", "number",
 	"pronoun", "preposition", "conjunction", "determiner", "numeral", "article"]
-const MAX_ANSWER_LEN := 28
+const MAX_ANSWER_LEN := 28       # words: they appear on answer buttons
+const MAX_SENTENCE_LEN := 140    # phrases / sentences
 const MAX_EXAMPLE_LEN := 60
 
 
@@ -101,6 +102,10 @@ static func load_all(dir: String = DIR) -> Dictionary:
 		"placement": placement, "tips": tips}
 
 
+static func _max_len(it: Dictionary) -> int:
+	return MAX_SENTENCE_LEN if str(it.get("kind", "")) == "phrase" else MAX_ANSWER_LEN
+
+
 static func validate_item(it: Dictionary, unit_id: int) -> Array:
 	var e: Array = []
 	for k in REQUIRED:
@@ -115,8 +120,22 @@ static func validate_item(it: Dictionary, unit_id: int) -> Array:
 		var v := str(it[k]).strip_edges()
 		if v == "":
 			e.append("empty '%s'" % k)
-		elif v.length() > MAX_ANSWER_LEN:
-			e.append("'%s' longer than %d chars" % [k, MAX_ANSWER_LEN])
+		elif v.length() > _max_len(it):
+			e.append("'%s' longer than %d chars" % [k, _max_len(it)])
+	# Hand-written near-miss wrong answers (sentences): exactly 4, none equal to the answer.
+	for pair in [["wrongEn", "en"], ["wrongAf", "af"]]:
+		if not it.has(pair[0]):
+			continue
+		var w = it[pair[0]]
+		if not w is Array or w.size() != 4:
+			e.append("'%s' must be an array of 4" % pair[0])
+			continue
+		var seen := {str(it[pair[1]]).to_lower(): true}
+		for x in w:
+			var t := str(x).strip_edges()
+			if t == "" or t.length() > _max_len(it) or seen.has(t.to_lower()):
+				e.append("'%s' has an empty, too long or duplicate entry: %s" % [pair[0], t])
+			seen[t.to_lower()] = true
 	for k in ["exampleAf", "exampleEn"]:
 		if it.has(k) and str(it[k]).length() > MAX_EXAMPLE_LEN:
 			e.append("'%s' too long" % k)
