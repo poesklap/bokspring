@@ -9,7 +9,7 @@ const KINDS := ["word", "phrase"]
 const POS := ["noun", "verb", "adjective", "adverb", "interjection", "phrase", "number",
 	"pronoun", "preposition", "conjunction", "determiner", "numeral", "article"]
 const MAX_ANSWER_LEN := 28
-const MAX_EXAMPLE_LEN := 80
+const MAX_EXAMPLE_LEN := 60
 
 
 static func _read_json(path: String, errors: Array):
@@ -74,12 +74,12 @@ static func load_all(dir: String = DIR) -> Dictionary:
 			it.tier = int(it.tier)
 			items.append(it)
 
-	# An alternative meaning must not be another item's main answer.
+	# altEn may name another item's answer: the engine then never offers the
+	# two as each other's wrong answer (see distractors.gd conflicts()).
 	for it in items:
 		for alt in it.get("altEn", []):
-			var other = en_seen.get(str(alt).to_lower())
-			if other != null and other != it.id:
-				errors.append("%s: altEn '%s' is the answer of %s" % [it.id, alt, other])
+			if str(alt).strip_edges() == "":
+				errors.append("%s: empty altEn entry" % it.id)
 
 	var placement: Array = []
 	var pl = _read_json(dir + "placement.json", errors)

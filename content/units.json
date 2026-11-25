@@ -1,0 +1,32 @@
+{
+  "units": [
+    {
+      "id": 1,
+      "titleAf": "Groete en hoflikheid",
+      "titleEn": "Greetings and courtesy",
+      "file": "unit1_greetings.json",
+      "xpToUnlock": 0
+    },
+    {
+      "id": 2,
+      "titleAf": "Getalle en tyd",
+      "titleEn": "Numbers and time",
+      "file": "unit2_numbers_time.json",
+      "xpToUnlock": 150
+    },
+    {
+      "id": 3,
+      "titleAf": "Kleure",
+      "titleEn": "Colours",
+      "file": "unit3_colours.json",
+      "xpToUnlock": 400
+    },
+    {
+      "id": 4,
+      "titleAf": "Kos en drinkgoed",
+      "titleEn": "Food and drink",
+      "file": "unit4_food_drink.json",
+      "xpToUnlock": 800
+    }
+  ]
+}

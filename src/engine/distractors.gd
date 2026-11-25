@@ -62,12 +62,11 @@ static func conflicts(target: Dictionary, cand: Dictionary, direction: String) -
 		return true
 	if prompt_text(cand, direction).to_lower() == prompt_text(target, direction).to_lower():
 		return true
-	# Alternative meanings would make two options correct.
-	if direction == AF_EN:
-		if _lower_set(target.get("altEn", [])).has(str(cand.get("en", "")).to_lower()):
-			return true
-		if _lower_set(cand.get("altEn", [])).has(str(target.get("en", "")).to_lower()):
-			return true
+	# Alternative meanings would make two options correct (in either direction).
+	if _lower_set(target.get("altEn", [])).has(str(cand.get("en", "")).to_lower()):
+		return true
+	if _lower_set(cand.get("altEn", [])).has(str(target.get("en", "")).to_lower()):
+		return true
 	return false
 
 

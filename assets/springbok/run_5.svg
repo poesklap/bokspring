@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<ellipse cx="128" cy="241" rx="45" ry="7" fill="#000000" fill-opacity="0.2"/>
+<g><path d="M116 159 L112.7 191.5 L116 216" stroke="#3A2416" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M140 159 L142.7 193.5 L140 220" stroke="#3A2416" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M114 119 L119 83.2 L137 83.2 L142 119 Z" fill="#3A2416" stroke="#3A2416" stroke-width="6" stroke-linejoin="round"/><ellipse cx="128" cy="73.2" rx="17" ry="15" fill="#3A2416" stroke="#3A2416" stroke-width="6"/><ellipse cx="103" cy="70.2" rx="15" ry="6.5" transform="rotate(20 103 70.2)" fill="#3A2416" stroke="#3A2416" stroke-width="6"/><ellipse cx="153" cy="70.2" rx="15" ry="6.5" transform="rotate(-20 153 70.2)" fill="#3A2416" stroke="#3A2416" stroke-width="6"/><ellipse cx="128" cy="137" rx="53" ry="41" fill="#3A2416" stroke="#3A2416" stroke-width="6"/><path d="M104 161 L100.5 187.8 L107 235" stroke="#3A2416" stroke-width="17" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M152 161 L157.1 185.3 L149 228" stroke="#3A2416" stroke-width="17" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M116 159 L112.7 191.5 L116 216" stroke="#C7A47A" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="116" cy="216" rx="4.5" ry="3.5" fill="#2B1D14"/>
+<path d="M140 159 L142.7 193.5 L140 220" stroke="#C7A47A" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="140" cy="220" rx="4.5" ry="3.5" fill="#2B1D14"/>
+<path d="M114 119 L119 83.2 L137 83.2 L142 119 Z" fill="#A86A35"/>
+<path d="M121 63.2 C110 49.2 109 35.2 117 25.2 C120 21.2 119 16.2 115 14.2" stroke="#3A2416" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M121 63.2 C110 49.2 109 35.2 117 25.2 C120 21.2 119 16.2 115 14.2" stroke="#3A2A20" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M135 63.2 C146 49.2 147 35.2 139 25.2 C136 21.2 137 16.2 141 14.2" stroke="#3A2416" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M135 63.2 C146 49.2 147 35.2 139 25.2 C136 21.2 137 16.2 141 14.2" stroke="#3A2A20" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="103" cy="70.2" rx="15" ry="6.5" transform="rotate(20 103 70.2)" fill="#C98A4B"/>
+<ellipse cx="94" cy="67.2" rx="5" ry="4" transform="rotate(20 103 70.2)" fill="#5A3220"/>
+<ellipse cx="153" cy="70.2" rx="15" ry="6.5" transform="rotate(-20 153 70.2)" fill="#C98A4B"/>
+<ellipse cx="162" cy="67.2" rx="5" ry="4" transform="rotate(-20 153 70.2)" fill="#5A3220"/>
+<ellipse cx="128" cy="73.2" rx="17" ry="15" fill="#C98A4B"/>
+<ellipse cx="128" cy="67.2" rx="10" ry="6" fill="#D9A065"/>
+<ellipse cx="128" cy="137" rx="53" ry="41" fill="#FFF8EE"/>
+<ellipse cx="128" cy="130" rx="53" ry="35" fill="#5A3220"/>
+<ellipse cx="128" cy="124" rx="50" ry="29" fill="#C98A4B"/>
+<ellipse cx="128" cy="112" rx="34" ry="12" fill="#D9A065"/>
+<path d="M128 121 C120 111 98 113 96 131 C95 147 112 161 128 171 C144 161 161 147 160 131 C158 113 136 111 128 121 Z" fill="#FFF8EE"/>
+<path d="M128 117 Q127.1 133 125 145" stroke="#A86A35" stroke-width="6" fill="none" stroke-linecap="round"/>
+<ellipse cx="125" cy="150" rx="4.5" ry="7.5" fill="#2B1D14"/>
+<path d="M104 161 L100.5 187.8 L107 235" stroke="#E6C9A0" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104 161 L100.5 187.8" stroke="#C98A4B" stroke-width="15" fill="none" stroke-linecap="round"/>
+<ellipse cx="107" cy="235" rx="5.5" ry="4" fill="#2B1D14"/>
+<path d="M152 161 L157.1 185.3 L149 228" stroke="#E6C9A0" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M152 161 L157.1 185.3" stroke="#C98A4B" stroke-width="15" fill="none" stroke-linecap="round"/>
+<ellipse cx="149" cy="228" rx="5.5" ry="4" fill="#2B1D14"/>
+<path d="M110 153 C116 161 122 167 128 171 C134 167 140 161 146 153 Z" fill="#FFF8EE"/>
+</svg>

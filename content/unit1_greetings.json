@@ -1,0 +1,520 @@
+{
+  "unit": 1,
+  "items": [
+    {
+      "id": "w_hallo",
+      "af": "hallo",
+      "en": "hello",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Hallo, ek is Sam.",
+      "exampleEn": "Hello, I'm Sam.",
+      "altEn": [
+        "hi"
+      ]
+    },
+    {
+      "id": "w_totsiens",
+      "af": "totsiens",
+      "en": "goodbye",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Totsiens, sien jou môre!",
+      "exampleEn": "Goodbye, see you tomorrow!",
+      "altEn": [
+        "bye"
+      ]
+    },
+    {
+      "id": "w_welkom",
+      "af": "welkom",
+      "en": "welcome",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Welkom in Kaapstad!",
+      "exampleEn": "Welcome to Cape Town!"
+    },
+    {
+      "id": "w_goeiemore",
+      "af": "goeiemôre",
+      "en": "good morning",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Goeiemôre, Ma!",
+      "exampleEn": "Good morning, Mom!",
+      "note": "Also written 'goeie môre'."
+    },
+    {
+      "id": "w_goeiemiddag",
+      "af": "goeiemiddag",
+      "en": "good afternoon",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Goeiemiddag, meneer.",
+      "exampleEn": "Good afternoon, sir."
+    },
+    {
+      "id": "w_goeienaand",
+      "af": "goeienaand",
+      "en": "good evening",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Goeienaand, almal!",
+      "exampleEn": "Good evening, everyone!"
+    },
+    {
+      "id": "w_goeienag",
+      "af": "goeienag",
+      "en": "good night",
+      "unit": 1,
+      "category": "greeting",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Goeienag, slaap lekker.",
+      "exampleEn": "Good night, sleep well."
+    },
+    {
+      "id": "w_dankie",
+      "af": "dankie",
+      "en": "thank you",
+      "unit": 1,
+      "category": "courtesy",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Dankie vir die koffie.",
+      "exampleEn": "Thanks for the coffee.",
+      "altEn": [
+        "thanks"
+      ]
+    },
+    {
+      "id": "w_asseblief",
+      "af": "asseblief",
+      "en": "please",
+      "unit": 1,
+      "category": "courtesy",
+      "partOfSpeech": "adverb",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Kom binne, asseblief.",
+      "exampleEn": "Come in, please."
+    },
+    {
+      "id": "w_jammer",
+      "af": "jammer",
+      "en": "sorry",
+      "unit": 1,
+      "category": "courtesy",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Ek is jammer, ek is laat.",
+      "exampleEn": "I'm sorry, I'm late."
+    },
+    {
+      "id": "w_ekskuus",
+      "af": "ekskuus",
+      "en": "excuse me",
+      "unit": 1,
+      "category": "courtesy",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Ekskuus, waar is die bank?",
+      "exampleEn": "Excuse me, where is the bank?",
+      "altEn": [
+        "pardon",
+        "sorry"
+      ]
+    },
+    {
+      "id": "w_ja",
+      "af": "ja",
+      "en": "yes",
+      "unit": 1,
+      "category": "response",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Ja, dit is reg.",
+      "exampleEn": "Yes, that's right."
+    },
+    {
+      "id": "w_nee",
+      "af": "nee",
+      "en": "no",
+      "unit": 1,
+      "category": "response",
+      "partOfSpeech": "interjection",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Nee, dankie.",
+      "exampleEn": "No, thank you."
+    },
+    {
+      "id": "w_lekker",
+      "af": "lekker",
+      "en": "nice",
+      "unit": 1,
+      "category": "response",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Dit was 'n lekker dag.",
+      "exampleEn": "It was a nice day.",
+      "altEn": [
+        "tasty",
+        "enjoyable",
+        "great"
+      ],
+      "note": "Very common: food, weather, a good time."
+    },
+    {
+      "id": "w_vriend",
+      "af": "vriend",
+      "en": "friend",
+      "unit": 1,
+      "category": "person",
+      "partOfSpeech": "noun",
+      "kind": "word",
+      "tier": 1,
+      "plural": "vriende",
+      "exampleAf": "Hy is my beste vriend.",
+      "exampleEn": "He is my best friend."
+    },
+    {
+      "id": "w_meneer",
+      "af": "meneer",
+      "en": "sir",
+      "unit": 1,
+      "category": "person",
+      "partOfSpeech": "noun",
+      "kind": "word",
+      "tier": 2,
+      "plural": "menere",
+      "exampleAf": "Dankie, meneer.",
+      "exampleEn": "Thank you, sir.",
+      "altEn": [
+        "Mr",
+        "mister"
+      ]
+    },
+    {
+      "id": "w_mevrou",
+      "af": "mevrou",
+      "en": "madam",
+      "unit": 1,
+      "category": "person",
+      "partOfSpeech": "noun",
+      "kind": "word",
+      "tier": 2,
+      "plural": "mevroue",
+      "exampleAf": "Goeiemôre, mevrou.",
+      "exampleEn": "Good morning, madam.",
+      "altEn": [
+        "Mrs",
+        "ma'am"
+      ]
+    },
+    {
+      "id": "w_naam",
+      "af": "naam",
+      "en": "name",
+      "unit": 1,
+      "category": "person",
+      "partOfSpeech": "noun",
+      "kind": "word",
+      "tier": 1,
+      "plural": "name",
+      "exampleAf": "My naam is Lindi.",
+      "exampleEn": "My name is Lindi."
+    },
+    {
+      "id": "w_ek",
+      "af": "ek",
+      "en": "I",
+      "unit": 1,
+      "category": "pronoun",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Ek is moeg.",
+      "exampleEn": "I am tired."
+    },
+    {
+      "id": "w_jy",
+      "af": "jy",
+      "en": "you",
+      "unit": 1,
+      "category": "pronoun",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Jy is baie vriendelik.",
+      "exampleEn": "You are very friendly.",
+      "note": "Informal 'you'; formal is 'u'."
+    },
+    {
+      "id": "w_hy",
+      "af": "hy",
+      "en": "he",
+      "unit": 1,
+      "category": "pronoun",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Hy woon in Pretoria.",
+      "exampleEn": "He lives in Pretoria."
+    },
+    {
+      "id": "w_sy",
+      "af": "sy",
+      "en": "she",
+      "unit": 1,
+      "category": "pronoun",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Sy is my suster.",
+      "exampleEn": "She is my sister.",
+      "note": "Also means 'his' (sy boek = his book).",
+      "altEn": [
+        "his"
+      ]
+    },
+    {
+      "id": "w_ons",
+      "af": "ons",
+      "en": "we",
+      "unit": 1,
+      "category": "pronoun",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Ons gaan nou huis toe.",
+      "exampleEn": "We're going home now.",
+      "altEn": [
+        "us",
+        "our"
+      ]
+    },
+    {
+      "id": "w_hulle",
+      "af": "hulle",
+      "en": "they",
+      "unit": 1,
+      "category": "pronoun",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Hulle is by die skool.",
+      "exampleEn": "They are at school.",
+      "altEn": [
+        "them",
+        "their"
+      ]
+    },
+    {
+      "id": "w_wie",
+      "af": "wie",
+      "en": "who",
+      "unit": 1,
+      "category": "question",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Wie is dit?",
+      "exampleEn": "Who is it?"
+    },
+    {
+      "id": "w_wat",
+      "af": "wat",
+      "en": "what",
+      "unit": 1,
+      "category": "question",
+      "partOfSpeech": "pronoun",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Wat doen jy?",
+      "exampleEn": "What are you doing?",
+      "note": "Also 'that/which' in the middle of a sentence."
+    },
+    {
+      "id": "w_waar",
+      "af": "waar",
+      "en": "where",
+      "unit": 1,
+      "category": "question",
+      "partOfSpeech": "adverb",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Waar is jou ma?",
+      "exampleEn": "Where is your mom?",
+      "altEn": [
+        "true"
+      ],
+      "note": "Also means 'true' (dis waar = it's true)."
+    },
+    {
+      "id": "w_hoe",
+      "af": "hoe",
+      "en": "how",
+      "unit": 1,
+      "category": "question",
+      "partOfSpeech": "adverb",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Hoe oud is jy?",
+      "exampleEn": "How old are you?"
+    },
+    {
+      "id": "w_hoekom",
+      "af": "hoekom",
+      "en": "why",
+      "unit": 1,
+      "category": "question",
+      "partOfSpeech": "adverb",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Hoekom lag jy?",
+      "exampleEn": "Why are you laughing?",
+      "note": "'Waarom' means the same."
+    },
+    {
+      "id": "p_hoe_gaan_dit",
+      "af": "Hoe gaan dit?",
+      "en": "How are you?",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1,
+      "exampleAf": "Hallo Piet, hoe gaan dit?",
+      "exampleEn": "Hi Piet, how are you?",
+      "note": "Literally 'How goes it?'"
+    },
+    {
+      "id": "p_dit_gaan_goed_dankie",
+      "af": "Dit gaan goed, dankie.",
+      "en": "I'm fine, thanks.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1,
+      "altEn": [
+        "I'm well, thank you."
+      ]
+    },
+    {
+      "id": "p_baie_dankie",
+      "af": "Baie dankie.",
+      "en": "Thank you very much.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1,
+      "altEn": [
+        "Thanks a lot."
+      ]
+    },
+    {
+      "id": "p_wat_is_jou_naam",
+      "af": "Wat is jou naam?",
+      "en": "What is your name?",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1
+    },
+    {
+      "id": "p_my_naam_is_piet",
+      "af": "My naam is Piet.",
+      "en": "My name is Piet.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1
+    },
+    {
+      "id": "p_aangename_kennis",
+      "af": "Aangename kennis.",
+      "en": "Nice to meet you.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 2,
+      "altEn": [
+        "Pleased to meet you."
+      ]
+    },
+    {
+      "id": "p_mooi_loop",
+      "af": "Mooi loop!",
+      "en": "Go well!",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 2,
+      "note": "A friendly goodbye; literally 'walk nicely'."
+    },
+    {
+      "id": "p_ek_verstaan_nie",
+      "af": "Ek verstaan nie.",
+      "en": "I don't understand.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 2,
+      "note": "One 'nie' only: it already ends the sentence."
+    },
+    {
+      "id": "p_ek_praat_nie_afrikaans_nie",
+      "af": "Ek praat nie Afrikaans nie.",
+      "en": "I don't speak Afrikaans.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "note": "Double negative: nie ... nie."
+    },
+    {
+      "id": "p_ek_het_jou_gemis",
+      "af": "Ek het jou gemis.",
+      "en": "I missed you.",
+      "unit": 1,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "note": "Past tense: het + ge- (mis → gemis)."
+    }
+  ]
+}

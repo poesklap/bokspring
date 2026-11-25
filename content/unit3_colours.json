@@ -1,0 +1,372 @@
+{
+  "unit": 3,
+  "items": [
+    {
+      "id": "w_rooi",
+      "af": "rooi",
+      "en": "red",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Die appel is rooi.",
+      "exampleEn": "The apple is red."
+    },
+    {
+      "id": "w_blou",
+      "af": "blou",
+      "en": "blue",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Die see is blou.",
+      "exampleEn": "The sea is blue."
+    },
+    {
+      "id": "w_groen",
+      "af": "groen",
+      "en": "green",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Die blare is groen.",
+      "exampleEn": "The leaves are green."
+    },
+    {
+      "id": "w_geel",
+      "af": "geel",
+      "en": "yellow",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Die piesang is geel.",
+      "exampleEn": "The banana is yellow."
+    },
+    {
+      "id": "w_wit",
+      "af": "wit",
+      "en": "white",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Die wolke is wit.",
+      "exampleEn": "The clouds are white."
+    },
+    {
+      "id": "w_swart",
+      "af": "swart",
+      "en": "black",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "My kat is swart.",
+      "exampleEn": "My cat is black."
+    },
+    {
+      "id": "w_pienk",
+      "af": "pienk",
+      "en": "pink",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Sy dra 'n pienk hemp.",
+      "exampleEn": "She's wearing a pink shirt."
+    },
+    {
+      "id": "w_pers",
+      "af": "pers",
+      "en": "purple",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Die blom is pers.",
+      "exampleEn": "The flower is purple."
+    },
+    {
+      "id": "w_oranje",
+      "af": "oranje",
+      "en": "orange (colour)",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Die lug is oranje.",
+      "exampleEn": "The sky is orange.",
+      "note": "The colour. The fruit is 'lemoen'."
+    },
+    {
+      "id": "w_bruin",
+      "af": "bruin",
+      "en": "brown",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Die hond is bruin.",
+      "exampleEn": "The dog is brown."
+    },
+    {
+      "id": "w_grys",
+      "af": "grys",
+      "en": "grey",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Oupa se hare is grys.",
+      "exampleEn": "Grandpa's hair is grey.",
+      "altEn": [
+        "gray"
+      ]
+    },
+    {
+      "id": "w_silwer",
+      "af": "silwer",
+      "en": "silver",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Sy het 'n silwer ring.",
+      "exampleEn": "She has a silver ring."
+    },
+    {
+      "id": "w_goue",
+      "af": "goue",
+      "en": "golden",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 3,
+      "exampleAf": "Hy het 'n goue medalje gewen.",
+      "exampleEn": "He won a gold medal.",
+      "altEn": [
+        "gold"
+      ],
+      "note": "'Goud' is the metal; 'goue' describes things."
+    },
+    {
+      "id": "w_ligblou",
+      "af": "ligblou",
+      "en": "light blue",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Die baba se kamer is ligblou.",
+      "exampleEn": "The baby's room is light blue."
+    },
+    {
+      "id": "w_donkergroen",
+      "af": "donkergroen",
+      "en": "dark green",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Die bos is donkergroen.",
+      "exampleEn": "The forest is dark green."
+    },
+    {
+      "id": "w_rooierig",
+      "af": "rooierig",
+      "en": "reddish",
+      "unit": 3,
+      "category": "colour",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 4,
+      "exampleAf": "Die grond is rooierig.",
+      "exampleEn": "The soil is reddish."
+    },
+    {
+      "id": "w_lig",
+      "af": "lig",
+      "en": "light",
+      "unit": 3,
+      "category": "shade",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Die kamer is lig.",
+      "exampleEn": "The room is light.",
+      "note": "Also the noun 'light' and 'light' in weight."
+    },
+    {
+      "id": "w_donker",
+      "af": "donker",
+      "en": "dark",
+      "unit": 3,
+      "category": "shade",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 1,
+      "exampleAf": "Dit word vroeg donker.",
+      "exampleEn": "It gets dark early."
+    },
+    {
+      "id": "w_helder",
+      "af": "helder",
+      "en": "clear",
+      "unit": 3,
+      "category": "shade",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 2,
+      "exampleAf": "Die water is helder.",
+      "exampleEn": "The water is clear.",
+      "altEn": [
+        "bright"
+      ]
+    },
+    {
+      "id": "w_bleek",
+      "af": "bleek",
+      "en": "pale",
+      "unit": 3,
+      "category": "shade",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 3,
+      "exampleAf": "Jy lyk bleek vandag.",
+      "exampleEn": "You look pale today."
+    },
+    {
+      "id": "w_kleurryk",
+      "af": "kleurryk",
+      "en": "colourful",
+      "unit": 3,
+      "category": "shade",
+      "partOfSpeech": "adjective",
+      "kind": "word",
+      "tier": 3,
+      "exampleAf": "Die mark is kleurryk.",
+      "exampleEn": "The market is colourful."
+    },
+    {
+      "id": "w_kleur",
+      "af": "kleur",
+      "en": "colour",
+      "unit": 3,
+      "category": "thing",
+      "partOfSpeech": "noun",
+      "kind": "word",
+      "tier": 1,
+      "plural": "kleure",
+      "exampleAf": "Watter kleur is jou kar?",
+      "exampleEn": "What colour is your car?",
+      "altEn": [
+        "color"
+      ]
+    },
+    {
+      "id": "w_reenboog",
+      "af": "reënboog",
+      "en": "rainbow",
+      "unit": 3,
+      "category": "thing",
+      "partOfSpeech": "noun",
+      "kind": "word",
+      "tier": 2,
+      "plural": "reënboë",
+      "exampleAf": "Kyk, 'n reënboog!",
+      "exampleEn": "Look, a rainbow!"
+    },
+    {
+      "id": "p_ek_hou_van_rooi",
+      "af": "Ek hou van rooi.",
+      "en": "I like red.",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1,
+      "note": "'Hou van' = like."
+    },
+    {
+      "id": "p_van_watter_kleur_hou_jy",
+      "af": "Van watter kleur hou jy?",
+      "en": "Which colour do you like?",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 2
+    },
+    {
+      "id": "p_die_lug_is_blou",
+      "af": "Die lug is blou.",
+      "en": "The sky is blue.",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1
+    },
+    {
+      "id": "p_die_gras_is_groen",
+      "af": "Die gras is groen.",
+      "en": "The grass is green.",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 1
+    },
+    {
+      "id": "p_ek_hou_nie_van_pienk_nie",
+      "af": "Ek hou nie van pienk nie.",
+      "en": "I don't like pink.",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "note": "Double negative: nie ... nie."
+    },
+    {
+      "id": "p_sy_het_n_rooi_rokkie",
+      "af": "Sy het 'n rooi rokkie.",
+      "en": "She has a little red dress.",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 3,
+      "note": "Diminutive: rok → rokkie."
+    },
+    {
+      "id": "p_die_son_het_helder_geskyn",
+      "af": "Die son het helder geskyn.",
+      "en": "The sun shone brightly.",
+      "unit": 3,
+      "category": "phrase",
+      "partOfSpeech": "phrase",
+      "kind": "phrase",
+      "tier": 4,
+      "note": "Past tense: het + ge- (skyn → geskyn)."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "tips": [
+    {
+      "id": "tip_verbs",
+      "titleEn": "Easy win: verbs don't change",
+      "bodyEn": "Great news: Afrikaans verbs stay the same no matter who does the action. No 'I am / you are / he is' juggling. Learn one form and you can use it with everyone.",
+      "examples": [
+        {
+          "af": "ek is",
+          "en": "I am"
+        },
+        {
+          "af": "jy is",
+          "en": "you are"
+        },
+        {
+          "af": "hulle is",
+          "en": "they are"
+        }
+      ],
+      "showAfterLevel": 1
+    },
+    {
+      "id": "tip_g_sound",
+      "titleEn": "The throaty g",
+      "bodyEn": "The Afrikaans g is a rasping sound in the back of the throat, like clearing it gently, or the 'ch' in Scottish 'loch'. Goeiemôre starts with it.",
+      "examples": [
+        {
+          "af": "goed",
+          "en": "good"
+        },
+        {
+          "af": "gister",
+          "en": "yesterday"
+        }
+      ],
+      "showAfterLevel": 2
+    },
+    {
+      "id": "tip_vowels",
+      "titleEn": "Tricky vowel sounds",
+      "bodyEn": "Say 'oe' like 'oo' in 'food', and 'ie' like 'ee' in 'see'. 'Ui' is close to 'ay' in 'say', but with rounded lips. 'Ê' is an open 'e', like 'air' without the r.",
+      "examples": [
+        {
+          "af": "koek",
+          "en": "cake"
+        },
+        {
+          "af": "piesang",
+          "en": "banana"
+        },
+        {
+          "af": "huis",
+          "en": "house"
+        },
+        {
+          "af": "sê",
+          "en": "say"
+        }
+      ],
+      "showAfterLevel": 3
+    },
+    {
+      "id": "tip_time",
+      "titleEn": "Telling the time: half drie",
+      "bodyEn": "'Half drie' means half-way to three, so 2:30, not 3:30. 'Kwart oor' is quarter past and 'kwart voor' is quarter to.",
+      "examples": [
+        {
+          "af": "half drie",
+          "en": "2:30"
+        },
+        {
+          "af": "kwart oor vier",
+          "en": "4:15"
+        },
+        {
+          "af": "kwart voor ses",
+          "en": "5:45"
+        }
+      ],
+      "showAfterLevel": 4
+    },
+    {
+      "id": "tip_double_negative",
+      "titleEn": "Say 'nie' twice",
+      "bodyEn": "Negative sentences usually end with a second 'nie'. It feels odd at first but soon sounds natural. If the first 'nie' already ends the sentence, the two merge into one.",
+      "examples": [
+        {
+          "af": "Ek praat nie Afrikaans nie.",
+          "en": "I don't speak Afrikaans."
+        },
+        {
+          "af": "Ek verstaan nie.",
+          "en": "I don't understand."
+        }
+      ],
+      "showAfterLevel": 5
+    },
+    {
+      "id": "tip_past_tense",
+      "titleEn": "Past tense: het + ge-",
+      "bodyEn": "For the past, 'het' takes the verb's place and the verb moves to the end with ge- in front. That one pattern covers almost everything. Verbs that already start with be-, ge-, ver-, er-, her- or ont- don't add ge-.",
+      "examples": [
+        {
+          "af": "Ek werk.",
+          "en": "I work."
+        },
+        {
+          "af": "Ek het gewerk.",
+          "en": "I worked."
+        },
+        {
+          "af": "Ek het vergeet.",
+          "en": "I forgot."
+        }
+      ],
+      "showAfterLevel": 6
+    },
+    {
+      "id": "tip_diminutives",
+      "titleEn": "Little words: -ie and -tjie",
+      "bodyEn": "Add -ie or -tjie to make something small or friendly. Depending on the last sound, the ending can also be -kie, -pie or -etjie. South Africans use these all the time, even for things that aren't small.",
+      "examples": [
+        {
+          "af": "kat → katjie",
+          "en": "cat → kitten"
+        },
+        {
+          "af": "koek → koekie",
+          "en": "cake → biscuit"
+        },
+        {
+          "af": "rok → rokkie",
+          "en": "dress → little dress"
+        }
+      ],
+      "showAfterLevel": 7
+    },
+    {
+      "id": "tip_omdat",
+      "titleEn": "Verb to the end after 'omdat'",
+      "bodyEn": "After 'omdat' (because), 'dat' (that) and 'as' (if), the verb jumps to the end of that part of the sentence.",
+      "examples": [
+        {
+          "af": "Ek eet omdat ek honger is.",
+          "en": "I eat because I'm hungry."
+        },
+        {
+          "af": "Hy sê dat hy moeg is.",
+          "en": "He says that he is tired."
+        }
+      ],
+      "showAfterLevel": 8
+    }
+  ]
+}

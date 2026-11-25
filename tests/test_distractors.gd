@@ -111,3 +111,13 @@ func test_time_limit_scales_with_length_and_box() -> void:
 	var slow := ChallengeGen.time_limit_ms("hond", ["dog", "hand"], 3, 0.8)
 	t.ok(slow > fast, "slower difficulty -> more time")
 	t.ok(short >= 2000 and long <= 10000, "clamped")
+
+
+func test_shared_meaning_excluded_in_reverse_direction_too() -> void:
+	var a := _item("w_jammer", "jammer", "sorry", "courtesy")
+	var b := _item("w_ekskuus", "ekskuus", "excuse me", "courtesy")
+	b["altEn"] = ["sorry"]
+	var c := _item("w_dankie", "dankie", "thank you", "courtesy")
+	for dir in [D.AF_EN, D.EN_AF]:
+		var picked := D.pick(a, [a, b, c], 2, dir, 1.0, _rng())
+		t.ok(not picked.map(func(i): return i.id).has("w_ekskuus"), "ekskuus never a wrong answer for jammer (%s)" % dir)

@@ -1,0 +1,388 @@
+{
+  "questions": [
+    {
+      "id": "pl_1_01",
+      "tier": 1,
+      "prompt": "hond",
+      "options": [
+        "dog",
+        "hand",
+        "house",
+        "cat"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_1_02",
+      "tier": 1,
+      "prompt": "kat",
+      "options": [
+        "cow",
+        "cat",
+        "coat",
+        "car"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_1_03",
+      "tier": 1,
+      "prompt": "huis",
+      "options": [
+        "horse",
+        "hose",
+        "house",
+        "hat"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_1_04",
+      "tier": 1,
+      "prompt": "boom",
+      "options": [
+        "boot",
+        "room",
+        "bomb",
+        "tree"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": "pl_1_05",
+      "tier": 1,
+      "prompt": "son",
+      "options": [
+        "sun",
+        "son",
+        "moon",
+        "sand"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_1_06",
+      "tier": 1,
+      "prompt": "skool",
+      "options": [
+        "school",
+        "shoe",
+        "skull",
+        "pool"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_1_07",
+      "tier": 1,
+      "prompt": "groot",
+      "options": [
+        "green",
+        "big",
+        "ground",
+        "small"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_1_08",
+      "tier": 1,
+      "prompt": "kos",
+      "options": [
+        "coast",
+        "cheese",
+        "food",
+        "cup"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_2_01",
+      "tier": 2,
+      "prompt": "kombuis",
+      "options": [
+        "bathroom",
+        "kitchen",
+        "garden",
+        "bedroom"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_2_02",
+      "tier": 2,
+      "prompt": "gister",
+      "options": [
+        "sister",
+        "tomorrow",
+        "yesterday",
+        "today"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_2_03",
+      "tier": 2,
+      "prompt": "Hoe gaan dit?",
+      "options": [
+        "How are you?",
+        "Where are you going?",
+        "How old are you?",
+        "What is it?"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_2_04",
+      "tier": 2,
+      "prompt": "Ek is moeg.",
+      "options": [
+        "I am hungry.",
+        "I am tired.",
+        "I am late.",
+        "I am sick."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_2_05",
+      "tier": 2,
+      "prompt": "verjaarsdag",
+      "options": [
+        "holiday",
+        "anniversary",
+        "birthday",
+        "weekend"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_2_06",
+      "tier": 2,
+      "prompt": "dikwels",
+      "options": [
+        "thick",
+        "seldom",
+        "often",
+        "always"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_2_07",
+      "tier": 2,
+      "prompt": "winkel",
+      "options": [
+        "window",
+        "corner",
+        "shop",
+        "wrinkle"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_2_08",
+      "tier": 2,
+      "prompt": "Waar woon jy?",
+      "options": [
+        "Where do you live?",
+        "When do you work?",
+        "Who are you?",
+        "Where are you going?"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_3_01",
+      "tier": 3,
+      "prompt": "Ek praat nie Engels nie.",
+      "options": [
+        "I don't speak English.",
+        "I speak English well.",
+        "I don't like English.",
+        "Do you speak English?"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_3_02",
+      "tier": 3,
+      "prompt": "Ons het gister geswem.",
+      "options": [
+        "We swim every day.",
+        "We will swim tomorrow.",
+        "We swam yesterday.",
+        "We can't swim."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_3_03",
+      "tier": 3,
+      "prompt": "Die katjie slaap.",
+      "options": [
+        "The cat is eating.",
+        "The kitten is sleeping.",
+        "The kitchen is quiet.",
+        "The dog is sleeping."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_3_04",
+      "tier": 3,
+      "prompt": "Ek bly tuis omdat ek siek is.",
+      "options": [
+        "I stay home because I'm ill",
+        "I'm ill but I went out",
+        "I stay home when it rains",
+        "I'm home, but not sick"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_3_05",
+      "tier": 3,
+      "prompt": "Hy het sy huiswerk gedoen.",
+      "options": [
+        "He is doing his homework.",
+        "He did his homework.",
+        "He forgot his homework.",
+        "She did her homework."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_3_06",
+      "tier": 3,
+      "prompt": "Sy moet môre werk.",
+      "options": [
+        "She worked this morning.",
+        "She wants to work today.",
+        "She must work tomorrow.",
+        "She can't work tomorrow."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": "pl_3_07",
+      "tier": 3,
+      "prompt": "Kan jy my help, asseblief?",
+      "options": [
+        "Can you help me, please?",
+        "Can I help you, please?",
+        "Did you help me?",
+        "Please don't help me."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_3_08",
+      "tier": 3,
+      "prompt": "Dit het die hele dag gereën.",
+      "options": [
+        "It rained all day.",
+        "It will rain all day.",
+        "It's sunny all day.",
+        "It rained at night."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_4_01",
+      "tier": 4,
+      "prompt": "Die brief word deur haar geskryf.",
+      "options": [
+        "The letter is written by her",
+        "She is reading the letter",
+        "She wrote him a letter",
+        "The letter was sent to her"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_4_02",
+      "tier": 4,
+      "prompt": "Die brug is in 1990 gebou.",
+      "options": [
+        "The bridge was built in 1990",
+        "The bridge fell in 1990",
+        "They'll build a bridge",
+        "The bridge is from 1909"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_4_03",
+      "tier": 4,
+      "prompt": "Hy het gesê dat hy laat sal wees.",
+      "options": [
+        "He says he is always late",
+        "He said he would be late",
+        "He said not to be late",
+        "He asked if he was late"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_4_04",
+      "tier": 4,
+      "prompt": "Sy het gevra of ek kan kom.",
+      "options": [
+        "She said I must come.",
+        "She asked if I could come.",
+        "She asked when I came.",
+        "She can't come with me."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_4_05",
+      "tier": 4,
+      "prompt": "Niemand het iets gesien nie.",
+      "options": [
+        "Everyone saw something.",
+        "Nobody saw anything.",
+        "Nobody came here.",
+        "Someone saw nothing new."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_4_06",
+      "tier": 4,
+      "prompt": "Ek het hom nog nooit gesien nie.",
+      "options": [
+        "I have never seen him.",
+        "I saw him again.",
+        "I still see him often.",
+        "I haven't seen him today."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "pl_4_07",
+      "tier": 4,
+      "prompt": "Hy kyk die kat uit die boom.",
+      "options": [
+        "He chases the cat away",
+        "He waits to see what happens",
+        "He climbs the tree quickly",
+        "He looks for the lost cat"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "pl_4_08",
+      "tier": 4,
+      "prompt": "Hy bêre 'n appeltjie vir die dors.",
+      "options": [
+        "He saves for a rainy day",
+        "He is very thirsty",
+        "He gives apples away",
+        "He eats an apple a day"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
