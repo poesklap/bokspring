@@ -26,6 +26,7 @@ const LANE_COLORS := [
 	Color("#4FA3E0"),  # sky blue
 	Color("#B48FD8"),  # lilac
 	Color("#6CC6A6"),  # mint
+	Color("#F08A7E"),  # coral
 ]
 # Colour-blind set (Okabe-Ito): neighbours alternate light/dark and blue/orange,
 # so they stay distinct for protan, deutan and tritan vision. Pair with patterns.
@@ -34,8 +35,9 @@ const LANE_COLORS_CB := [
 	Color("#0072B2"),  # deep blue, dark
 	Color("#F0E442"),  # yellow, very light
 	Color("#56B4E9"),  # sky blue, light
+	Color("#CC79A7"),  # reddish purple, mid
 ]
-const LANE_PATTERN_NAMES := ["dots", "stripes", "plain", "checks"]
+const LANE_PATTERN_NAMES := ["dots", "stripes", "plain", "checks", "waves"]
 
 # --- Type & sizes ------------------------------------------------------------
 const FONT_SMALL := 20

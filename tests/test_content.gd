@@ -24,7 +24,7 @@ func test_bad_question_is_rejected() -> void:
 	t.eq(e.size(), 2, "duplicate options + bad index")
 
 
-func test_every_real_item_can_make_a_3_lane_challenge() -> void:
+func test_every_real_item_can_make_a_5_lane_challenge() -> void:
 	var r := Loader.load_all()
 	var e := LearningEngine.new({"items": r.items, "units": r.units},
 		{"difficulty": "advanced"}, 3000, 11)
@@ -33,8 +33,8 @@ func test_every_real_item_can_make_a_3_lane_challenge() -> void:
 	rng.seed = 2
 	var thin: Array = []
 	for it in r.items:
-		var c: Dictionary = CG.build(it, CG.TYPE_AF_EN, r.items, 3, 0.9, 1, 1.0, rng, "x")
-		if c.options.size() < 3:
+		var c: Dictionary = CG.build(it, CG.TYPE_AF_EN, r.items, 5, 0.9, 1, 1.0, rng, "x")
+		if c.options.size() < 5:
 			thin.append(it.id)
 		t.eq(c.options[c.correctIndex], it.en, "correct option for " + it.id)
 	t.eq(thin, [], "items without enough distractors")
