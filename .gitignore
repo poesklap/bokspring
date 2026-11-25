@@ -15,3 +15,8 @@ dist/
 # OS and editor
 .DS_Store
 *.log
+
+# Godot
+.godot/
+/build/
+/export_presets.cfg.bak
