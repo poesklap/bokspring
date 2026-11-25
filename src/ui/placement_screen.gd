@@ -82,10 +82,10 @@ func _result() -> void:
 	U.label(box, "You're starting at", "", true)
 	U.label(box, str(Difficulty.profile(level).label), "HugeLabel", true)
 	var blurb := {
-		"beginner": "We'll start with the basics, slowly, with two lanes.",
-		"elementary": "Around Grade 7–9 level: three lanes and steady pace.",
+		"beginner": "We'll start with the basics at a gentle pace.",
+		"elementary": "Around Grade 7–9 level, at a steady pace.",
 		"intermediate": "Around Grade 10–11: faster, trickier wrong answers.",
-		"advanced": "Matric level: four lanes, quick pace, close look-alikes.",
+		"advanced": "Matric level: quick pace and close look-alikes.",
 	}
 	U.label(box, blurb[level], "MutedLabel", true)
 	U.spacer(box)

@@ -37,13 +37,13 @@ func _ready() -> void:
 	ring.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	box.add_child(ring)
 	var d: Dictionary = e.progress.daily
-	var goal_text := "Today's goal done! 🎉" if d.goalMet else \
+	var goal_text := "Today's goal done!" if d.goalMet else \
 		"Today: %d/%d rounds or %d/%d XP" % [int(d.rounds), Progress.GOAL_ROUNDS, int(d.xp), Progress.GOAL_XP]
 	U.label(box, goal_text, "MutedLabel", true)
 
 	var run: Dictionary = Game.run
 	var play_text := "Speel  (play)" if int(run.level) == 1 and int(run.lives) == 5 else \
-		"Speel  · vlak %d  · ♥ %d" % [int(run.level), int(run.lives)]
+		"Speel  ·  vlak %d  ·  %d lives" % [int(run.level), int(run.lives)]
 	U.button(box, play_text, func(): play.emit())
 
 	var unlock := e.next_unlock()
@@ -61,6 +61,7 @@ func _ready() -> void:
 		b.tooltip_text = "Coming soon"
 		b.disabled = true
 		b.clip_text = true
+		b.add_theme_font_size_override("font_size", 24)
 		b.theme_type_variation = &"GhostButton"
 		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(b)
@@ -68,6 +69,7 @@ func _ready() -> void:
 	s.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	s.size_flags_stretch_ratio = 1.6
 	s.clip_text = true
+	s.add_theme_font_size_override("font_size", 24)
 	U.label(box, "Shop and word garden open in the next update.", "MutedLabel", true)
 
 

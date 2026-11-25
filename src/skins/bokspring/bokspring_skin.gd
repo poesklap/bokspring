@@ -317,7 +317,7 @@ func _show_level_complete(summary: Dictionary, record: bool) -> void:
 		var tv := VBoxContainer.new()
 		tp.add_child(tv)
 		var tt := Label.new()
-		tt.text = "💡 " + str(tip.titleEn)
+		tt.text = "Tip: " + str(tip.titleEn)
 		tt.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		tv.add_child(tt)
 		var tb := Label.new()

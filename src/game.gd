@@ -136,7 +136,7 @@ func _on_voices_checked(has_af: bool) -> void:
 	if not has_af and not bool(settings.voiceNoticeShown):
 		settings.voiceNoticeShown = true
 		Storage.save_json(Storage.SETTINGS, settings)
-		voice_notice.emit("This phone has no Afrikaans voice, so the game won't speak and listening challenges are off.\n\nIf your phone offers one, you can add it in Settings → Accessibility → Spoken Content → Voices.")
+		voice_notice.emit("This phone has no Afrikaans voice, so the game won't speak and listening challenges are off.\n\nIf your phone offers one, you can add it in Settings > Accessibility > Spoken Content > Voices.")
 
 
 # --- audio ------------------------------------------------------------------

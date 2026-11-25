@@ -17,7 +17,7 @@ func _ready() -> void:
 	box = U.page(self, true)
 	var head := HBoxContainer.new()
 	box.add_child(head)
-	U.button(head, "← Terug", func(): back.emit(), "GhostButton")
+	U.button(head, "< Terug", func(): back.emit(), "GhostButton")
 	U.label(head, "  Instellings", "TitleLabel")
 
 	U.label(box, "Difficulty", "MutedLabel")
@@ -30,7 +30,7 @@ func _ready() -> void:
 		Game.engine.set_difficulty(Difficulty.LEVELS[i])
 		Game.save())
 	box.add_child(diff)
-	U.label(box, "Sets speed, lanes, how alike the wrong answers are, and when English → Afrikaans starts. The game keeps adapting within it.", "MutedLabel")
+	U.label(box, "Sets speed, how alike the wrong answers are, and when English-to-Afrikaans starts. The game keeps adapting within it.", "MutedLabel")
 
 	_slider("Music", "music")
 	_slider("Sound effects", "sfx")
@@ -41,7 +41,7 @@ func _ready() -> void:
 	if not has_voice:
 		sp.disabled = true
 		rate.editable = false
-		U.label(box, "No Afrikaans voice on this device, so speech is off. If your phone offers one, add it in Settings → Accessibility → Spoken Content → Voices, then reopen the app.", "MutedLabel")
+		U.label(box, "No Afrikaans voice on this device, so speech is off. If your phone offers one, add it in Settings > Accessibility > Spoken Content > Voices, then reopen the app.", "MutedLabel")
 
 	_toggle("Reduce motion", "reduceMotion")
 	_toggle("Colour-blind friendly lanes", "colorBlind")
