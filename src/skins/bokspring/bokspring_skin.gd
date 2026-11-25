@@ -11,8 +11,9 @@ const VELD := "res://assets/arenas/veld/"
 const LANE_W := 1.25
 const BASE_SPEED := 9.0        # m/s at difficulty speed 1.0
 const TRACK_LEN := 220.0
-const TILE := 1.6              # metres per ground texture tile
+const TILE := 2.5              # metres per track texture tile (512 px)
 const LEVEL_SIZE := 10
+const SCENERY_SPAN := 34.0
 
 enum S { IDLE, COUNTDOWN, RUN, CRASH, PANEL, PAUSED }
 
@@ -22,6 +23,7 @@ var cam: Camera3D
 var player: AnimatedSprite3D
 var track_mat: StandardMaterial3D
 var grass_mat: StandardMaterial3D
+var edge_mat: StandardMaterial3D
 var scenery: Array = []
 var gate: Node3D
 var lane_marks: Node3D
@@ -162,11 +164,12 @@ func _process(delta: float) -> void:
 		level_time += delta
 	# Scroll ground (texture moves toward the camera).
 	track_mat.uv1_offset.y -= dz / TILE
-	grass_mat.uv1_offset.y -= dz / (TILE * 2.0)
+	grass_mat.uv1_offset.y -= dz / (TILE * 1.6)
+	edge_mat.uv1_offset.y -= dz / TILE
 	for s in scenery:
 		s.position.z += dz
-		if s.position.z > 8.0:
-			_place_scenery(s, -TRACK_LEN * 0.55)
+		if s.position.z > 5.0:
+			_place_scenery(s, s.position.z - SCENERY_SPAN)
 	if player.sprite_frames and not player.animation == &"crash":
 		player.speed_scale = clampf(speed / BASE_SPEED, 0.2, 1.6)
 	if state == S.RUN and not challenge.is_empty() and not committed:
@@ -452,7 +455,7 @@ func _build_world() -> void:
 	gm.size = Vector2(160, TRACK_LEN)
 	grass.mesh = gm
 	grass.material_override = grass_mat
-	grass_mat.uv1_scale = Vector3(160 / (TILE * 2.0), TRACK_LEN / (TILE * 2.0), 1)
+	grass_mat.uv1_scale = Vector3(160 / (TILE * 1.6), TRACK_LEN / (TILE * 1.6), 1)
 	grass.position = Vector3(0, -0.01, -TRACK_LEN / 2 + 10)
 	world.add_child(grass)
 	track_mat = _ground_material(VELD + "ground_track.svg", Color("#b5562f"))
@@ -464,16 +467,33 @@ func _build_world() -> void:
 	track_mat.uv1_scale = Vector3(tm.size.x / TILE, TRACK_LEN / TILE, 1)
 	track.position = Vector3(0, 0, -TRACK_LEN / 2 + 10)
 	world.add_child(track)
+	# Stony, grassy borders along both sides of the track.
+	edge_mat = _ground_material(VELD + "track_edge.svg", Color(0, 0, 0, 0))
+	edge_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+	edge_mat.alpha_scissor_threshold = 0.3
+	edge_mat.uv1_scale = Vector3(1, TRACK_LEN / TILE, 1)
+	for side in [-1.0, 1.0]:
+		var edge := MeshInstance3D.new()
+		var em := PlaneMesh.new()
+		em.size = Vector2(TILE * 0.25, TRACK_LEN)
+		edge.mesh = em
+		edge.material_override = edge_mat
+		edge.position = Vector3(side * (tm.size.x / 2 + em.size.x / 2 - 0.2), 0.008, -TRACK_LEN / 2 + 10)
+		if side < 0:
+			edge.scale.x = -1  # mirror: the stony side faces the track
+		world.add_child(edge)
 
 	# Scenery along both sides.
 	var kinds := [["acacia.svg", 512, 5.0], ["bush.svg", 256, 1.6], ["grass_tuft.svg", 128, 0.8],
-		["koppie_rock.svg", 256, 2.2], ["termite_mound.svg", 256, 1.8], ["acacia.svg", 512, 4.0],
-		["grass_tuft.svg", 128, 0.7], ["bush.svg", 256, 1.4]]
-	for i in 36:
+		["koppie_rock.svg", 256, 2.2], ["termite_mound.svg", 256, 1.8], ["acacia_tall.svg", 512, 5.5],
+		["grass_clump.svg", 128, 0.9], ["aloe.svg", 256, 1.7], ["rocks_cluster.svg", 128, 1.0],
+		["fence_post.svg", 256, 1.3], ["dead_tree.svg", 512, 4.5], ["grass_tuft.svg", 128, 0.7],
+		["bush.svg", 256, 1.4], ["grass_clump.svg", 128, 0.8], ["aloe.svg", 256, 1.4]]
+	for i in 44:
 		var k = kinds[i % kinds.size()]
 		var s := _billboard(VELD + k[0], k[1], k[2])
 		world.add_child(s)
-		_place_scenery(s, -_rng.randf_range(0, TRACK_LEN * 0.6))
+		_place_scenery(s, 5.0 - _rng.randf_range(0, SCENERY_SPAN))
 		scenery.append(s)
 
 	# The springbok.
@@ -490,7 +510,7 @@ func _build_world() -> void:
 	if ct:
 		frames.add_frame(&"crash", ct)
 	player.sprite_frames = frames
-	player.pixel_size = 2.0 / 256.0
+	player.pixel_size = 2.6 / 256.0
 	player.offset = Vector2(0, 113)
 	player.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	player.shaded = false
@@ -528,7 +548,8 @@ func _billboard(path: String, px: int, height_m: float) -> Sprite3D:
 
 func _place_scenery(s: Node3D, z: float) -> void:
 	var side := -1.0 if _rng.randf() < 0.5 else 1.0
-	s.position = Vector3(side * _rng.randf_range(LANE_W * 2 + 1.2, 18.0), 0, z - _rng.randf_range(0, 20))
+	# Only the near veld is on screen with the high camera, so keep props close.
+	s.position = Vector3(side * _rng.randf_range(LANE_W * 2.5 + 0.6, 8.0), 0, z - _rng.randf_range(0, 1.5))
 
 
 func _spawn_obstacles() -> void:
@@ -581,7 +602,7 @@ func _mark_lanes() -> void:
 		strip.mesh = pm
 		var sm := StandardMaterial3D.new()
 		sm.albedo_color = Style.lane_color(i, cb)
-		sm.albedo_color.a = 0.28
+		sm.albedo_color.a = 0.2
 		sm.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		sm.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		strip.material_override = sm
