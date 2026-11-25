@@ -79,7 +79,8 @@ func start(p_engine: LearningEngine, p_host: Node) -> void:
 
 # --- level flow ---------------------------------------------------------------
 
-func start_level() -> void:
+## quick = true skips the 3-2-1 (used by "Weer!" so a restart takes well under a second).
+func start_level(quick: bool = false) -> void:
 	_clear_modal()
 	host.refresh_day()
 	engine.start_round(LEVEL_SIZE)
@@ -89,29 +90,30 @@ func start_level() -> void:
 	_clear_gate()
 	pair_panel.visible = false
 	_set_player_crashed(false)
-	lanes = 5
-	lane = 2
+	lanes = int(engine.profile().lanes)
+	lane = lanes / 2
+	_mark_lanes()
 	player.position.x = _lane_x(lane)
 	prompt_label.text = ""
 	prompt_hint.text = ""
 	_clear_chips()
 	_update_hud()
 	host.play_music("run_loop")
-	_countdown()
+	_countdown(quick)
 
 
-func _countdown() -> void:
+func _countdown(quick: bool = false) -> void:
 	state = S.COUNTDOWN
 	target_speed = _base_speed() * 0.6
-	var steps := ["3", "2", "1", "Poesklap!"]
+	var steps := ["Poesklap!"] if quick else ["3", "2", "1", "Poesklap!"]
 	for i in steps.size():
 		if state != S.COUNTDOWN:
 			return
 		center_label.text = steps[i]
 		center_label.visible = true
 		_pop(center_label)
-		host.play_sfx("countdown", 1.0 if i < 3 else 1.5)
-		await get_tree().create_timer(0.45).timeout
+		host.play_sfx("countdown", 1.5 if i == steps.size() - 1 else 1.0)
+		await get_tree().create_timer(0.3 if quick else 0.45).timeout
 	center_label.visible = false
 	if state != S.COUNTDOWN:
 		return
@@ -291,7 +293,7 @@ func _game_over() -> void:
 	var again := _add_button(box, "Weer!  (again)", "")
 	again.pressed.connect(func():
 		host.play_sfx("tap")
-		start_level())
+		start_level(true))
 	var menu := _add_button(box, "Menu", "GhostButton")
 	menu.pressed.connect(_exit_to_menu)
 	again.grab_focus()
@@ -788,9 +790,9 @@ func _build_hud() -> void:
 
 	swipe_hint = _hud_label(30)
 	swipe_hint.text = "Tap the right answer\nto run into its lane"
-	swipe_hint.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
-	swipe_hint.offset_top = -300
-	swipe_hint.offset_bottom = -190
+	swipe_hint.set_anchors_preset(Control.PRESET_CENTER)
+	swipe_hint.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	swipe_hint.grow_vertical = Control.GROW_DIRECTION_BOTH
 	swipe_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	swipe_hint.visible = false
 	root.add_child(swipe_hint)

@@ -36,6 +36,8 @@ func run(p_main: Node, p_dir: String) -> void:
 	await _snap("07_crash_pair")
 	await _wait(2.0)
 	await _snap("08_after_crash")
+	skin.challenge = {}
+	await time_restart(main)
 	get_tree().quit()
 
 
@@ -48,3 +50,13 @@ func _snap(name: String) -> void:
 	var img := get_viewport().get_texture().get_image()
 	img.save_png(dir.path_join(name + ".png"))
 	print("shot ", name)
+
+
+## Dev check: time from tapping "Weer!" to the first challenge being playable.
+func time_restart(p_main: Node) -> void:
+	var skin = p_main.skin
+	var t0 := Time.get_ticks_msec()
+	skin.start_level(true)
+	while skin.challenge.is_empty() or skin.state != skin.S.RUN:
+		await get_tree().process_frame
+	print("restart_ms ", Time.get_ticks_msec() - t0)
