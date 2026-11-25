@@ -1,0 +1,17 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Reference PDFs (copyrighted, for local use only)
+/reference/*
+!/reference/README.md
+
+# Build and dependencies
+node_modules/
+dist/
+.vite/
+
+# OS and editor
+.DS_Store
+*.log
