@@ -103,7 +103,7 @@ func start_level() -> void:
 func _countdown() -> void:
 	state = S.COUNTDOWN
 	target_speed = _base_speed() * 0.6
-	var steps := ["3", "2", "1", "Hardloop!"]
+	var steps := ["3", "2", "1", "Poesklap!"]
 	for i in steps.size():
 		if state != S.COUNTDOWN:
 			return
